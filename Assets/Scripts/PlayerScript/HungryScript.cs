@@ -26,7 +26,7 @@ public class HungryScript : MonoBehaviour
 
     void Start()
     {
-        m_anim = GameObject.Find("HUDCanvas").GetComponent<Animator>();
+        //m_anim = GameObject.Find("HUDCanvas").GetComponent<Animator>();
     }
 
     // Update is called once per frame
