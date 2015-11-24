@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Slot : MonoBehaviour {
+public class Slot : MonoBehaviour
+{
 
     public void MouseEnter()
         {

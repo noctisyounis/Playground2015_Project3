@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SlotManager : MonoBehaviour {
+public class SlotManager : MonoBehaviour
+{
 
     #region Public_Variable
 
@@ -9,7 +10,8 @@ public class SlotManager : MonoBehaviour {
     public int m_rowCount = 0;
     public GameObject m_slotPrefab;
     public Vector3 m_defautSlotPosition;
-
+    public int m_slotOffset = 110;
+    public Vector3 m_slotPosition;
 
     #endregion
 
@@ -24,7 +26,7 @@ public class SlotManager : MonoBehaviour {
         {
             for (int j = 0; j < m_rowCount; j++)
             {
-                GameObject currentSlot = Instantiate(m_slotPrefab, new Vector3(m_slotPosition.x + i * m_slotOffset, m_slotPosition.y + j * m_slotOffset), Quaternion.identity) as GameObject;
+                GameObject currentSlot = Instantiate(m_slotPrefab, new Vector3(m_slotPosition.x + i * m_slotOffset, m_slotPosition.y - j * m_slotOffset), Quaternion.identity) as GameObject;
                 currentSlot.transform.SetParent(transform, false);
                 //currentSlot.transform.localScale = Vector3.one;
             }
@@ -67,7 +69,6 @@ public class SlotManager : MonoBehaviour {
 
     void Awake()
     {
-        HUDManager.m_slotManager = this;
 
         m_slotPosition = m_defautSlotPosition;
     }
@@ -86,8 +87,7 @@ public class SlotManager : MonoBehaviour {
 
     #region PrivateAndProtected
 
-    private int m_slotOffset = 110;
-    public Vector3 m_slotPosition;
+    
 
     #endregion
 
