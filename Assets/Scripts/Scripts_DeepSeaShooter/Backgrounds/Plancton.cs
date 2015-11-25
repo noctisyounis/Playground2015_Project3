@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Star : MonoBehaviour
+public class Plancton : MonoBehaviour
 {
     #region Public Variables || Properties
     public float m_speed; //Speed of the stars 

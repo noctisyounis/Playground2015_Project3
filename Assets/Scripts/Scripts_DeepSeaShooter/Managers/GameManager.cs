@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject m_scoreUIText;
     public GameObject m_timeCounter;
     public GameObject m_titleGame;
-    public GameObject m_experienceCounter;
+    public GameObject m_experiencePanel;
 
     public enum e_gameManagerState
     {
@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
 
                 //Hide GameOver
                 m_gameOver.SetActive(false);
+
+                //Hide ExpPanel
+                m_experiencePanel.SetActive(false);
 
                 //Display the game title
                 m_titleGame.SetActive(true);
@@ -89,7 +92,7 @@ public class GameManager : MonoBehaviour
 
             case e_gameManagerState.Scoring:
 
-                m_experienceCounter.SetActive(true);
+                m_experiencePanel.SetActive(true);
 
                 break;
 

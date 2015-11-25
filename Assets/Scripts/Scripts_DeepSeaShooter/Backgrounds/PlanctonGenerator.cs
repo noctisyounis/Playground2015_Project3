@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StarGenerator : MonoBehaviour
+public class PlanctonGenerator : MonoBehaviour
 {
     #region Public Variables || Properties
-    public GameObject m_star; //Refer to our starGO
-    public int m_maxStars; //Maximun of stars 
+    public GameObject m_plancton; //Refer to our starGO
+    public int m_maxPlancton; //Maximun of stars 
     #endregion
 
     #region Main Methods
@@ -19,21 +19,21 @@ public class StarGenerator : MonoBehaviour
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
         //Loop to create Stars
-        for (int i = 0; i < m_maxStars; i++)
+        for (int i = 0; i < m_maxPlancton; i++)
         {
-            GameObject star = (GameObject)Instantiate(m_star);
+            GameObject plancton = (GameObject)Instantiate(m_plancton);
 
             //Set the stars color
-            m_star.GetComponent<SpriteRenderer>().color = m_starColor[i % m_starColor.Length];
+            m_plancton.GetComponent<SpriteRenderer>().color = m_planctonColor[i % m_planctonColor.Length];
 
             //Set the position of the star (randomly)
-            m_star.transform.position = new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+            m_plancton.transform.position = new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
 
             //Set a random speed of the star
-            m_star.GetComponent<Star>().m_speed = -(1f * Random.value + 0.5f);
+            m_plancton.GetComponent<Plancton>().m_speed = -(1f * Random.value + 0.5f);
 
             //Make the star a chikd of the StarGenerator
-            star.transform.parent = transform;
+            plancton.transform.parent = transform;
         }
     }
 
@@ -46,7 +46,7 @@ public class StarGenerator : MonoBehaviour
 
     #region Private && Protected Variables
     //Arry of color
-    private Color[] m_starColor =
+    private Color[] m_planctonColor =
     {
         new Color(0.5f,0.5f,1f), //Blue
         new Color(0,1f,1f), //Green
