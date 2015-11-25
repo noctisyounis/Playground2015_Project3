@@ -10,8 +10,16 @@ public class HUDManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        m_slotManager.CreateSlots();
-        m_slotGame.CreateSlots();
+        if (m_slotManager != null)
+        {
+            m_slotManager.CreateSlots();
+        }
+        if (m_slotManager != null)
+        {
+            m_slotGame.CreateSlots();
+        }
+
+        
 	}
 	
 	// Update is called once per frame
