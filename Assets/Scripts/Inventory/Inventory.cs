@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public int m_slotX, m_slotY;
     public GUISkin m_skin;
     public GameObject m_avatar;
+    public int m_ratioInventory = 1; 
     #endregion
 
     #region MainMethods
@@ -20,7 +21,7 @@ public class Inventory : MonoBehaviour
     {
         m_avatar = GameObject.FindGameObjectWithTag("Avatar");
         m_inventorySize = new Rect(m_slotX, m_slotY, 200, 200);
-        m_slotSize = (m_slotX * m_slotY);
+        m_slotSize = (m_slotX * m_slotY) * m_ratioInventory;
 
         for (int i = 0; i < m_slotSize; i++)
         {

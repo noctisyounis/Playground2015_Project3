@@ -32,15 +32,18 @@ public class HungryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_damaged)
+        if (m_DamageImage != null)
         {
-            m_DamageImage.color = m_FlashColor;
+            if (m_damaged)
+            {
+                m_DamageImage.color = m_FlashColor;
+            }
+            else
+            {
+                //m_DamageImage.color = Color.Lerp(m_DamageImage.color, Color.clear, m_FlashSpeed * Time.deltaTime);
+            }
+            m_damaged = false; 
         }
-        else
-        {
-            m_DamageImage.color = Color.Lerp(m_DamageImage.color, Color.clear, m_FlashSpeed * Time.deltaTime);
-        }
-        m_damaged = false;
     }
 
     public void TakeDamage(int amount)
