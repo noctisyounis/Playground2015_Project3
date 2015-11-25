@@ -13,6 +13,7 @@ public class EnemyControl : MonoBehaviour
     {
         m_speed = 12.5f;
         m_scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
+        //m_experienceUIText = GameObject.FindGameObjectWithTag("ExperienceTextTag");
     }
 
     // Update is called once per frame
@@ -45,7 +46,9 @@ public class EnemyControl : MonoBehaviour
             PlayExplosion();
 
             //Add 100 points to the score
-            m_scoreUIText.GetComponent<GameScore>().score += 100; 
+            m_scoreUIText.GetComponent<GameScore>().score += 100;
+            //Add 10 points to the xp
+            //m_experienceUIText.GetComponent<ExperienceScore>().experience += 10;
 
             Destroy(gameObject); //Destroy enemy ship
         }
@@ -64,5 +67,6 @@ public class EnemyControl : MonoBehaviour
     #region Private && Protected Variables
     private float m_speed; //For the enemy speed 
     private GameObject m_scoreUIText;
+    //private GameObject m_experienceUIText;
     #endregion
 }

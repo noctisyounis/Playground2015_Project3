@@ -4,43 +4,51 @@ using UnityEngine.UI;
 
 public class ExperienceScore : MonoBehaviour
 {
-    private Text m_expScoring;
-    private int m_score;
-
-    public int score
+    #region Public Variables || Properties
+    /*public int experience
     {
         get
         {
-            return this.m_score;
+            return this.m_experience;
         }
 
         set
         {
-            this.m_score = value;
+            this.m_experience = value;
             UpdateExpTextUI();
         }
-    }
+    }*/
+    #endregion
 
+    #region Main Methods
     // Use this for initialization
     void Start()
     {
+        //Get TextUI componement of this gameobject
         m_expScoring = GetComponent<Text>();
-    }
+        m_scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
 
-    // Update is called once per frame
-    void Update()
-    {
+        UpdateExpTextUI();
 
     }
 
-    //Function to update exp
-    public void UpdateExpTextUI()
+//Function to update exp text UI
+public void UpdateExpTextUI()
     {
         //Compute Scoring to Experience
-        score = GetComponent<GameScore>().score;
+        int score = m_scoreUIText.GetComponent<GameScore>().score;
         int exp = score / 100;
 
-        string expScoring = string.Format("{0:0000000}", exp);
-        m_expScoring.text = expScoring;
+        string expStr = string.Format("{0:0000000}", exp);
+        m_expScoring.text = expStr;
+
+        Debug.Log("Exp : " + expStr);
     }
+    #endregion
+
+    #region Private && Protected Variables
+    private Text m_expScoring;
+    private GameObject m_scoreUIText;
+    //private int m_experience; 
+    #endregion
 }

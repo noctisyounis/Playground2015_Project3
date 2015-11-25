@@ -25,19 +25,19 @@ public class GameScore : MonoBehaviour
     void Start()
     {
         //Get TextUI componement of this gameobject
-        scoreTextUI = GetComponent<Text>();
+        m_scoreTextUI = GetComponent<Text>();
     }
 
     //Function to update the score text UI
     public void UpdateScoreTextUI()
     {
         string scoreStr = string.Format("{0:0000000}", m_score);
-        scoreTextUI.text = scoreStr;
+        m_scoreTextUI.text = scoreStr;
     } 
     #endregion
 
     #region Private && Protected Variables
-    private Text scoreTextUI;
+    private Text m_scoreTextUI;
     private int m_score;
     #endregion
 }

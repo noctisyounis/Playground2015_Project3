@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
         max.x = max.x - halfSizeX; // substract the enemy sprite half height
         max.y = max.y - halfSizeY; //add the enemy sprite half height
 
-        Debug.Log("Min Enemy : " + min + " Max Enemy : " + max);
+        //Debug.Log("Min Enemy : " + min + " Max Enemy : " + max);
 
         m_enemy.transform.position = new Vector2(max.x, Random.Range(min.y, max.y));
 

@@ -93,7 +93,7 @@ public class PlayerControl : MonoBehaviour
         max.x = max.x - halfSizeX; // substract the player sprite half height
         max.y = max.y - halfSizeY; //substract the player sprite half width
 
-        Debug.Log("Min Player : " + min + " Max Player : " + max);
+        //Debug.Log("Min Player : " + min + " Max Player : " + max);
 
         //Get player current position
         Vector2 position = transform.position; // minuscules
