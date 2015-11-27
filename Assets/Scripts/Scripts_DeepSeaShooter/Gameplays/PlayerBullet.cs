@@ -7,7 +7,7 @@ public class PlayerBullet : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        m_speed = 50f;
+        m_speed = 16f;
     }
 
     // Update is called once per frame
@@ -20,12 +20,13 @@ public class PlayerBullet : MonoBehaviour
         position = new Vector2(position.x + m_speed * Time.deltaTime, position.y);
 
         //Update bullet position
-
         transform.position = position;
 
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); //this is the top-right of the screen
+        //this is the top-right of the screen
+        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); 
 
-        if (transform.position.x > max.x) //Destroy the bullet that go outside of the screen
+        //Destroy the bullet that go outside of the screen
+        if (transform.position.x > max.x) 
         {
             Destroy(gameObject);
         }
@@ -34,7 +35,7 @@ public class PlayerBullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D Col)
     {
         //Detect collision of player bullet with enemy ship
-        if ((Col.tag == "EnemyShipTag"))
+        if ((Col.tag == "EnemyMobTag"))
         {
             //Destroy enemy ship
             Destroy(gameObject);

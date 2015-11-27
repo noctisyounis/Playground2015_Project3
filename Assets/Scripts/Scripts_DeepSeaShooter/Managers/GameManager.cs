@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject m_timeCounter;
     public GameObject m_titleGame;
     public GameObject m_experiencePanel;
+    public GameObject m_savedExp;
 
     public enum e_gameManagerState
     {
@@ -86,14 +87,18 @@ public class GameManager : MonoBehaviour
                 m_gameOver.SetActive(true);
 
                 //Change game manager state to scoring state after 5 secondes
-                Invoke("ChangeToScoringState", 5f);
+                Invoke("ChangeToScoringState", 3f);
 
                 break;
 
             case e_gameManagerState.Scoring:
 
+                //Display Xp Counter
                 m_experiencePanel.SetActive(true);
 
+                //Save Xp
+                m_savedExp.GetComponent<Save>().SaveXp();
+                
                 break;
 
             default:

@@ -4,36 +4,30 @@ using System.Collections;
 public class Plancton : MonoBehaviour
 {
     #region Public Variables || Properties
-    public float m_speed; //Speed of the stars 
+    public float m_speed; //Speed of the Plancton 
     #endregion
 
     #region Main Methods
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        //Get the current position of the star
+        //Get the current position of the Plancton
         Vector2 position = transform.position;
 
-        //Compute the star new position
+        //Compute the Plancton new position
         position = new Vector2(position.x + m_speed * Time.deltaTime, position.y);
 
-        //Update the star position
+        //Update the Plancton position
         transform.position = position;
 
         //This is the bottom-left point of the screen
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
-        //This is tjs the top-right point of the screen
+        //This is ths the top-right point of the screen
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        //If the star goes outside of the left of the screen
-        //then position the star on the right edge of the screen
+        //If the Plancton goes outside of the left of the screen
+        //then position the Plancton on the right edge of the screen
         //and randomly between top and bottom side of the screen
         if (transform.position.x < min.x)
         {

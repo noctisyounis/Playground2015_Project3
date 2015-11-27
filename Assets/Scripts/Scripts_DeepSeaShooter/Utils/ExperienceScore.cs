@@ -7,20 +7,21 @@ public class ExperienceScore : MonoBehaviour
     #region Public Variables || Properties
     public int m_xpDivisor;
     #endregion
+
     #region Main Methods
     // Use this for initialization
     void Start()
     {
         //Get TextUI componement of this gameobject
         m_expScoring = GetComponent<Text>();
+
         m_scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
 
         UpdateExpTextUI();
-
     }
 
-//Function to update exp text UI
-public void UpdateExpTextUI()
+    //Function to update exp text UI
+    public void UpdateExpTextUI()
     {
         //Compute Scoring to Experience
         int score = m_scoreUIText.GetComponent<GameScore>().score;
@@ -28,8 +29,6 @@ public void UpdateExpTextUI()
 
         string expStr = string.Format("{0:0000000}", exp);
         m_expScoring.text = expStr;
-
-        Debug.Log("Exp : " + expStr);
     }
     #endregion
 

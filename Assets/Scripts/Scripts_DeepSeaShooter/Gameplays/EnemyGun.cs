@@ -11,14 +11,8 @@ public class EnemyGun : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //Fire en ennemy bullet after 1 second
-        Invoke("FireEnemyBullet", 1f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        //Fire en ennemy bullet after 2 second
+        InvokeRepeating("FireEnemyBullet",0 , 2f);
     }
 
     //Function to fire an enemy bullet
@@ -41,6 +35,6 @@ public class EnemyGun : MonoBehaviour
             //Set the bullet direction
             bullet.GetComponent<EnemyBullet>().SetDirection(direction);
         }
-    } 
+    }
     #endregion
 }

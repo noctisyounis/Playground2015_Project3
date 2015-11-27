@@ -5,30 +5,25 @@ using System.Collections.Generic; //For Queue
 public class BubbleController : MonoBehaviour
 {
     #region Public Variables || Properties
-    public GameObject[] Bubbles; //An array of Planet prefabs
+    public GameObject[] Bubbles; //An array of bubble prefabs
     #endregion
 
     #region Main Methods
     // Use this for initialization
     void Start()
     {
-        //Add planets to the Queue (Enqueue them)
-        m_availableBubbles.Enqueue(Bubbles[0]);
-        m_availableBubbles.Enqueue(Bubbles[1]);
-        m_availableBubbles.Enqueue(Bubbles[2]);
-
-        //Call the MovePlanetDown function every 20 seconds
-        InvokeRepeating("MoveBubbleUp", 0, 5f);
+        //Add bubble to the Queue(Enqueue them)
+        for (int i = 0; i < Bubbles.Length; i++)
+        {
+            m_availableBubbles.Enqueue(Bubbles[i]);
+        }
+                
+        //Call the MovePlanetDown function every 7 seconds
+        InvokeRepeating("MoveBubbleUp", 0, 7f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    //Function to dequeue a planet, and set its isMoving flage to true
-    //So that the planet starts scrolling down the screen
+    //Function to dequeue a bubble, and set its isMoving flage to true
+    //So that the bubble starts scrolling up the screen
     void MoveBubbleUp()
     {
         EnqueueBubbles();
@@ -37,25 +32,25 @@ public class BubbleController : MonoBehaviour
         if (m_availableBubbles.Count == 0)
             return;
 
-        //Get a planet from the queue
+        //Get a bubble from the queue
         GameObject aBubble = m_availableBubbles.Dequeue();
 
         //Set the planet isMoving flag to true
         aBubble.GetComponent<Bubble>().m_isMoving = true;
     }
 
-    //Function to Enqueue planet that are below the screen and are not moving
+    //Function to Enqueue bubble that are below the screen and are not moving
     void EnqueueBubbles()
     {
         foreach (GameObject aBubble in Bubbles)
         {
-            //If the planet is below the screen, and the planet is not moving
-            if ((aBubble.transform.position.x < 0) && (!aBubble.GetComponent<Bubble>().m_isMoving))
+            //If the bubble is out of the top of the screen, and the bubble is not moving
+            if ((aBubble.transform.position.y > 0) && (!aBubble.GetComponent<Bubble>().m_isMoving))
             {
-                //Reset the planet position
+                //Reset the bubble position
                 aBubble.GetComponent<Bubble>().ResetPosition();
 
-                //Enqueue the planet
+                //Enqueue the bubble
                 m_availableBubbles.Enqueue(aBubble);
             }
         }

@@ -6,7 +6,8 @@ public class Destroyer : MonoBehaviour
     #region Main Methods
     void DestroyGameObject()
     {
-        Destroy(gameObject); //This will destroy the animation a the last frame
+        //This will destroy the animation a the last frame
+        Destroy(gameObject); 
     } 
     #endregion
 }

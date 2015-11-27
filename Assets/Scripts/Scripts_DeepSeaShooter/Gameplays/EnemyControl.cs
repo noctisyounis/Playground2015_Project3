@@ -11,9 +11,8 @@ public class EnemyControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        m_speed = 12.5f;
+        m_speed = 4f;
         m_scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
-        //m_experienceUIText = GameObject.FindGameObjectWithTag("ExperienceTextTag");
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class EnemyControl : MonoBehaviour
         //Get Enemy position
         Vector2 position = transform.position;
 
-        //Compute the enemy position
+        //Compute the Enemy position
         position = new Vector2(position.x - m_speed * Time.deltaTime, position.y);
 
         //Update Enemy position
@@ -31,7 +30,7 @@ public class EnemyControl : MonoBehaviour
         //this is the bottom-left of the screen
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
-        //Destroy if the enemy went out of the screen
+        //Destroy if the Enemy went out of the screen
         if (transform.position.x < min.x)
         {
             Destroy(gameObject);
@@ -40,17 +39,16 @@ public class EnemyControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D Col)
     {
-        //Detect collision of the enemy ship with Player ship or player's bullet
-        if ((Col.tag == "PlayerShipTag") || (Col.tag == "PlayerBulletTag"))
+        //Detect collision of the Enemy with Player Mob or player's bullet
+        if ((Col.tag == "PlayerMobTag") || (Col.tag == "PlayerBulletTag"))
         {
             PlayExplosion();
 
             //Add 100 points to the score
             m_scoreUIText.GetComponent<GameScore>().score += 100;
-            //Add 10 points to the xp
-            //m_experienceUIText.GetComponent<ExperienceScore>().experience += 10;
 
-            Destroy(gameObject); //Destroy enemy ship
+            //Destroy enemy
+            Destroy(gameObject); 
         }
     }
 
@@ -65,8 +63,7 @@ public class EnemyControl : MonoBehaviour
     #endregion
 
     #region Private && Protected Variables
-    private float m_speed; //For the enemy speed 
+    private float m_speed;
     private GameObject m_scoreUIText;
-    //private GameObject m_experienceUIText;
     #endregion
 }

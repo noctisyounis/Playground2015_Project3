@@ -11,7 +11,8 @@ public class PlayerControl : MonoBehaviour
     Private & Protected
     */
     #region Public Variables || Properties
-    public GameObject m_gameManager; //Reference to our GameManager
+    //Reference to our GameManager
+    public GameObject m_gameManager;
 
     public GameObject m_playerBullet;
     public GameObject m_bulletPosition01;
@@ -40,12 +41,6 @@ public class PlayerControl : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -67,8 +62,12 @@ public class PlayerControl : MonoBehaviour
         }
 
         //These two lines get the input from keyboard with arrow or ZQSD
-        float x = Input.GetAxisRaw("Horizontal"); //The value will be -1, 0, or 1 (for left, no value, right)
-        float y = Input.GetAxisRaw("Vertical"); //The value will be -1, 0, or 1 (for down, no value, up)
+
+        //The value will be -1, 0, or 1 (for left, no value, right)
+        float x = Input.GetAxisRaw("Horizontal");
+
+        //The value will be -1, 0, or 1 (for down, no value, up)
+        float y = Input.GetAxisRaw("Vertical");
 
         //Now base on the input we compute a direction vector, and we normalized it to get an unit vector
         Vector2 direction = new Vector2(x, y).normalized;
@@ -81,22 +80,30 @@ public class PlayerControl : MonoBehaviour
     {
         //Find the screen limits to the player's movement (left, right, top and bottom to the edge of the screen)
 
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)); //This is the bottom-left point (corner) of the screen
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); //This is the top-right point (corner) of the screen
+        //This is the bottom-left point (corner) of the screen
+        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
+        //This is the top-right point (corner) of the screen
+        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
+        //Compute the half size of the sprite with the transformation
         float halfSizeX = GetComponent<SpriteRenderer>().sprite.bounds.extents.x * transform.localScale.x;
         float halfSizeY = GetComponent<SpriteRenderer>().sprite.bounds.extents.y * transform.localScale.y;
 
-        min.x = min.x + halfSizeX; //add the player sprite half height
-        min.y = min.y + halfSizeY; //add the player sprite half width
+        //Add the player sprite half width
+        min.x = min.x + halfSizeX;
 
-        max.x = max.x - halfSizeX; // substract the player sprite half height
-        max.y = max.y - halfSizeY; //substract the player sprite half width
+        //Add the player sprite half height
+        min.y = min.y + halfSizeY;
 
-        //Debug.Log("Min Player : " + min + " Max Player : " + max);
+        //Substract the player sprite half width
+        max.x = max.x - halfSizeX;
+
+        //Substract the player sprite half height
+        max.y = max.y - halfSizeY;
 
         //Get player current position
-        Vector2 position = transform.position; // minuscules
+        Vector2 position = transform.position;
 
         //Calculate the new position
         position += direction * m_speed * Time.deltaTime;
@@ -109,17 +116,21 @@ public class PlayerControl : MonoBehaviour
         transform.position = position;
     }
 
-    void OnTriggerEnter2D(Collider2D Col) // minuscule in parameter
+    void OnTriggerEnter2D(Collider2D col)
     {
         //Detect collision of player ship with enemy ship or enemy bullet.
-        if ((Col.tag == "EnemyShipTag") || (Col.tag == "EnemyBulletTag"))
+        if ((col.tag == "EnemyMobTag") || (col.tag == "EnemyBulletTag"))
         {
             PlayExplosion();
 
-            m_lives--; //Substract one live
-            m_livesUIText.text = m_lives.ToString(); //Update live UItext
+            //Substract one live
+            m_lives--;
 
-            if (m_lives == 0) //If our player is dead
+            //Update live UItext
+            m_livesUIText.text = m_lives.ToString();
+
+            //If our player is dead
+            if (m_lives == 0)
             {
                 //Change gamemanager state to gameover state
                 m_gameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.e_gameManagerState.GameOver);
@@ -141,8 +152,11 @@ public class PlayerControl : MonoBehaviour
     #endregion
 
     #region Private && Protected Variables
-    private const int MAX_LIVES = 3; //Maximun player's live
-    private int m_lives; //Current plyer live 
+    //Maximun player's live
+    private const int MAX_LIVES = 3;
+
+    //Current plyer live 
+    private int m_lives;
     #endregion
 
 }

@@ -39,8 +39,11 @@ public class TimeCounter : MonoBehaviour
             //Compute the ellapsed time
             m_ellapsedTime = Time.time - m_startTime;
 
-            m_minutes = (int)m_ellapsedTime / 60; //Get the minutes
-            m_seconds = (int)m_ellapsedTime % 60; //Get the seconds
+            //Get the minutes
+            m_minutes = (int)m_ellapsedTime / 60;
+
+            //Get the seconds
+            m_seconds = (int)m_ellapsedTime % 60;
 
             //Update the time counter UI Text
             m_timeUI.text = string.Format("{0:00}:{1:00}", m_minutes, m_seconds);
@@ -49,10 +52,18 @@ public class TimeCounter : MonoBehaviour
     #endregion
 
     #region Private && Protected Variables
-    private Text m_timeUI; //Reference to the time counter UI Text
-    private float m_startTime; //The time when the user clicks on play
-    private float m_ellapsedTime; //The ellapsed time after the user clicks on play
-    private bool m_startCounter; //The flag to start the counter
+    //Reference to the time counter UI Text
+    private Text m_timeUI;
+
+    //The time when the user clicks on play
+    private float m_startTime;
+
+    //The ellapsed time after the user clicks on play
+    private float m_ellapsedTime;
+
+    //The flag to start the counter
+    private bool m_startCounter;
+
     private int m_minutes;
     private int m_seconds;
     #endregion

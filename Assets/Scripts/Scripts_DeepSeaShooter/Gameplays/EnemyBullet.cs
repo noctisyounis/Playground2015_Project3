@@ -7,14 +7,8 @@ public class EnemyBullet : MonoBehaviour
     //Set default value in Awake Function
     void Awake()
     {
-        m_speed = 31.25f;
+        m_speed = 8f;
         m_isReady = false;
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
     }
 
     //Function to set the bullet's direction
@@ -22,7 +16,9 @@ public class EnemyBullet : MonoBehaviour
     {
         //Set the direction normalized, to get a unit vector
         m_direction = direction.normalized;
-        m_isReady = true; //Set the flag to true
+
+        //Set the flag to true
+        m_isReady = true;
     }
 
     // Update is called once per frame
@@ -39,10 +35,13 @@ public class EnemyBullet : MonoBehaviour
             //Update the bullet position
             transform.position = position;
 
-            //Destroy the bullet that are outside of the screen
-            Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)); //This is the bottom-left point of the screen
-            Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); //This is ths top-right point of the screen
+            //This is the bottom-left point of the screen
+            Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
+            //This is ths top-right point of the screen
+            Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); 
+
+            //Destroy the bullet that are outside of the screen
             if ((transform.position.x < min.x) || (transform.position.x > max.x)
                 || (transform.position.y < min.y) || (transform.position.y > max.y))
             {
@@ -54,16 +53,22 @@ public class EnemyBullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D Col)
     {
         //Detect the collision of Enemy bullet with the player ship
-        if ((Col.tag == "PlayerShipTag"))
+        if ((Col.tag == "PlayerMobTag"))
         {
-            Destroy(gameObject); //Destroy the player ship
+            //Destroy the player ship
+            Destroy(gameObject); 
         }
     } 
     #endregion
 
     #region Private && Protected Variables
-    private float m_speed; //Speed of the bullet
-    private Vector2 m_direction; //Direction of the bullet
-    private bool m_isReady; //To know when the bullet direction is set 
+    //Speed of the bullet
+    private float m_speed;
+
+    //Direction of the bullet
+    private Vector2 m_direction;
+
+    //To know when the bullet direction is set 
+    private bool m_isReady;
     #endregion
 }
