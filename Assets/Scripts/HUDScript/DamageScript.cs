@@ -13,7 +13,7 @@ public class DamageScript : MonoBehaviour {
     {
         if (GUILayout.Button("damage"))
         {
-            GameObject.Find("Koromon").GetComponent<HungryScript>().TakeDamage(DamageOnAttack);
+            GameObject.Find("Hugh_Jackman").GetComponent<HungryScript>().TakeDamage(DamageOnAttack);
         }
     } 
     #endregion

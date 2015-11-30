@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 84dd4962ce81bc9489a6301f87dc6ec4
+timeCreated: 1448621284
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AnimeMaquetteIdle01-03_0
+    21300002: AnimeMaquetteIdle01-03_1
+    21300004: AnimeMaquetteIdle01-03_2
+    21300006: AnimeMaquetteIdle01-03_3
+    21300008: AnimeMaquetteIdle01-03_4
+    21300010: AnimeMaquetteIdle01-03_5
+    21300012: AnimeMaquetteIdle01-03_6
+    21300014: AnimeMaquetteIdle01-03_7
+    21300016: AnimeMaquetteIdle01-03_8
+    21300018: AnimeMaquetteIdle01-03_9
+    21300020: AnimeMaquetteIdle01-03_10
+    21300022: AnimeMaquetteIdle01-03_11
+    21300024: AnimeMaquetteIdle01-03_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AnimeMaquetteIdle01-03_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 26
+        width: 195
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 26
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_2
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 26
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_3
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 26
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_4
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 26
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_5
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 26
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_6
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 27
+        width: 190
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_7
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 26
+        width: 189
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_8
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 25
+        width: 189
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_9
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 25
+        width: 189
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_10
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 23
+        width: 189
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_11
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 24
+        width: 189
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquetteIdle01-03_12
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 24
+        width: 189
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,6 +14,7 @@ public class HungryScript : MonoBehaviour
     public static AudioClip m_DeathClip;
     public float m_FlashSpeed = 5f;
     public Color m_FlashColor = new Color(1f, 0f, 0f, 0.1f);
+    public GameObject m_hugh;
 
     #endregion
 
@@ -64,7 +65,10 @@ public class HungryScript : MonoBehaviour
         Debug.Log("ok");
         m_isDead = true;
 
-        m_anim.SetBool("GameOver", true);
+        
+        
+        
+        
 
         //m_playerAudio.clip = m_DeathClip;
         //m_playerAudio.Play();
