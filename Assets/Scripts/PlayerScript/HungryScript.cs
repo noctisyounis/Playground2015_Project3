@@ -8,7 +8,7 @@ public class HungryScript : MonoBehaviour
     #region Public_Variable
 
     public int m_StartingHungry = 100;
-    public static int m_CurrentHungry;
+    public int m_CurrentHungry;
     public Slider m_HungrySlider;
     public Image m_DamageImage;
     public static AudioClip m_DeathClip;
@@ -60,15 +60,11 @@ public class HungryScript : MonoBehaviour
         }
     }
 
-    static public void Death()
+    public void Death()
     {
         Debug.Log("ok");
         m_isDead = true;
-
-        
-        
-        
-        
+        GameObject.Find("Canvas").GetComponent<Animator>().SetBool("IsGameOver", true);
 
         //m_playerAudio.clip = m_DeathClip;
         //m_playerAudio.Play();
@@ -76,7 +72,6 @@ public class HungryScript : MonoBehaviour
 
 
     }
-
     #endregion
 
     #region PrivateAndProtected
