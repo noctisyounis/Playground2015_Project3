@@ -27,7 +27,7 @@ public class EnemyControl : MonoBehaviour
         //Update Enemy position
         transform.position = position;
 
-        //this is the bottom-left of the screen
+        //This is the bottom-left of the screen
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
         //Destroy if the Enemy went out of the screen
@@ -37,10 +37,10 @@ public class EnemyControl : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D Col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         //Detect collision of the Enemy with Player Mob or player's bullet
-        if ((Col.tag == "PlayerMobTag") || (Col.tag == "PlayerBulletTag"))
+        if ((col.tag == "PlayerMobTag") || (col.tag == "PlayerBulletTag"))
         {
             PlayExplosion();
 
