@@ -4,12 +4,23 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour
 {
     #region Public Variables || Properties
-    //This is the enemy prefab
-    public GameObject m_enemy;
+    public GameObject m_enemy; //This is the enemy prefab
     int count = 0;
     #endregion
 
     #region Main Methods
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
     //Function to spawn enemy
     void SpawnEnemy()
     {
@@ -45,14 +56,14 @@ public class EnemySpawner : MonoBehaviour
     {
         float spawnInNSeconds;
 
-        if (m_maxSpawnRateInSeconds > 0.5f)
+        if (m_maxSpawnRateInSeconds > 1f)
         {
             //Pick a number between 1 and MaxSpawnRateInSeconds
-            spawnInNSeconds = Random.Range(0.5f, m_maxSpawnRateInSeconds);
+            spawnInNSeconds = Random.Range(1f, m_maxSpawnRateInSeconds);
         }
         else
         {
-            spawnInNSeconds = 0.2f;
+            spawnInNSeconds = 1f;
         }
 
         Invoke("SpawnEnemy", spawnInNSeconds);
@@ -61,12 +72,12 @@ public class EnemySpawner : MonoBehaviour
     //Function to increase difficulty
     void IncreaseSpawnRate()
     {
-        if (m_maxSpawnRateInSeconds > 0.5f)
+        if (m_maxSpawnRateInSeconds > 1f)
         {
             m_maxSpawnRateInSeconds--;
         }
 
-        if (m_maxSpawnRateInSeconds == 0.5f)
+        if (m_maxSpawnRateInSeconds == 1f)
         {
             CancelInvoke("IncreaseSpawnRate");
         }
@@ -93,6 +104,6 @@ public class EnemySpawner : MonoBehaviour
     #endregion
 
     #region Private && Protected Variables
-    private float m_maxSpawnRateInSeconds; 
+    private float m_maxSpawnRateInSeconds = 5f; 
     #endregion
 }

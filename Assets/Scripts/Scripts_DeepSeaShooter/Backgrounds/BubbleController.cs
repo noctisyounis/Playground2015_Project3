@@ -5,7 +5,7 @@ using System.Collections.Generic; //For Queue
 public class BubbleController : MonoBehaviour
 {
     #region Public Variables || Properties
-    public GameObject[] m_bubbles; //An array of bubble prefabs
+    public GameObject[] Bubbles; //An array of bubble prefabs
     #endregion
 
     #region Main Methods
@@ -13,9 +13,9 @@ public class BubbleController : MonoBehaviour
     void Start()
     {
         //Add bubble to the Queue(Enqueue them)
-        for (int i = 0; i < m_bubbles.Length; i++)
+        for (int i = 0; i < Bubbles.Length; i++)
         {
-            m_availableBubbles.Enqueue(m_bubbles[i]);
+            m_availableBubbles.Enqueue(Bubbles[i]);
         }
                 
         //Call the MovePlanetDown function every 7 seconds
@@ -42,7 +42,7 @@ public class BubbleController : MonoBehaviour
     //Function to Enqueue bubble that are below the screen and are not moving
     void EnqueueBubbles()
     {
-        foreach (GameObject aBubble in m_bubbles)
+        foreach (GameObject aBubble in Bubbles)
         {
             //If the bubble is out of the top of the screen, and the bubble is not moving
             if ((aBubble.transform.position.y > 0) && (!aBubble.GetComponent<Bubble>().m_isMoving))

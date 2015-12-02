@@ -4,27 +4,19 @@ using UnityEngine.UI;
 
 public class Save : MonoBehaviour
 {
+    public Text m_xpUIText;
+
+
     public void SaveXp()
     {
-        int xpInt = GetComponent<ExperienceScore>().exp;
+        //int result = GetComponent<GameManager>().ConvertStringToInt(m_xpUIText.ToString());
 
-        Debug.Log("xpINT = " + xpInt);
+        //PlayerPrefs.SetInt("SavedXp", result);
 
-        if (PlayerPrefs.HasKey("SavedXp"))
-        {
-            int oldXp = PlayerPrefs.GetInt("SavedXp");
-
-            Debug.Log("OldXp = " + oldXp);
-
-            PlayerPrefs.SetInt("SavedXp", xpInt + oldXp);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("SavedXp", xpInt);
-        }
-
-        Debug.Log("playerPref" + PlayerPrefs.GetInt("SavedXp"));
     }
 
-
+    void OnGUI()
+    {
+        GUILayout.Button("content: " + m_xpUIText);
+    }
 }
