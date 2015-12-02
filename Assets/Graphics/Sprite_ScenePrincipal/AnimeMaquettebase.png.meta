@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 807fcfb714de7874290a933d812f1a89
+timeCreated: 1448873051
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AnimeMaquettebase_0
+    21300002: AnimeMaquettebase_1
+    21300004: AnimeMaquettebase_2
+    21300006: AnimeMaquettebase_3
+    21300008: AnimeMaquettebase_4
+    21300010: AnimeMaquettebase_5
+    21300012: AnimeMaquettebase_6
+    21300014: AnimeMaquettebase_7
+    21300016: AnimeMaquettebase_8
+    21300018: AnimeMaquettebase_9
+    21300020: AnimeMaquettebase_10
+    21300022: AnimeMaquettebase_11
+    21300024: AnimeMaquettebase_12
+    21300026: AnimeMaquettebase_13
+    21300028: AnimeMaquettebase_14
+    21300030: AnimeMaquettebase_15
+    21300032: AnimeMaquettebase_16
+    21300034: AnimeMaquettebase_17
+    21300036: AnimeMaquettebase_18
+    21300038: AnimeMaquettebase_19
+    21300040: AnimeMaquettebase_20
+    21300042: AnimeMaquettebase_21
+    21300044: AnimeMaquettebase_22
+    21300046: AnimeMaquettebase_23
+    21300048: AnimeMaquettebase_24
+    21300050: AnimeMaquettebase_25
+    21300052: AnimeMaquettebase_26
+    21300054: AnimeMaquettebase_27
+    21300056: AnimeMaquettebase_28
+    21300058: AnimeMaquettebase_29
+    21300060: AnimeMaquettebase_30
+    21300062: AnimeMaquettebase_31
+    21300064: AnimeMaquettebase_32
+    21300066: AnimeMaquettebase_33
+    21300068: AnimeMaquettebase_34
+    21300070: AnimeMaquettebase_35
+    21300072: AnimeMaquettebase_36
+    21300074: AnimeMaquettebase_37
+    21300076: AnimeMaquettebase_38
+    21300078: AnimeMaquettebase_39
+    21300080: AnimeMaquettebase_40
+    21300082: AnimeMaquettebase_41
+    21300084: AnimeMaquettebase_42
+    21300086: AnimeMaquettebase_43
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AnimeMaquettebase_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1036
+        width: 187
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1036
+        width: 187
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1036
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1036
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1036
+        width: 187
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1036
+        width: 187
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_6
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1036
+        width: 187
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 836
+        width: 187
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_8
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 836
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_9
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 836
+        width: 188
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_10
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 864
+        width: 187
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_11
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 836
+        width: 187
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_12
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 836
+        width: 187
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_13
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 836
+        width: 187
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_14
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 836
+        width: 118
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 636
+        width: 187
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_16
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 636
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_17
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 636
+        width: 187
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_18
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 631
+        width: 175
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_19
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 625
+        width: 185
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_20
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 632
+        width: 180
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_21
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 636
+        width: 182
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_22
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 636
+        width: 187
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_23
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 436
+        width: 187
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_24
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 434
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_25
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 435
+        width: 187
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 440
+        width: 187
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_27
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 439
+        width: 187
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_28
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 439
+        width: 187
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_29
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 440
+        width: 187
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_30
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 236
+        width: 187
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_31
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 236
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_32
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 234
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_33
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 234
+        width: 181
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_34
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 227
+        width: 183
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_35
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 231
+        width: 186
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_36
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 236
+        width: 187
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_37
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 36
+        width: 191
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_38
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 36
+        width: 190
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_39
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 35
+        width: 171
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_40
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 30
+        width: 178
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_41
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 32
+        width: 149
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_42
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 34
+        width: 127
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquettebase_43
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 36
+        width: 118
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

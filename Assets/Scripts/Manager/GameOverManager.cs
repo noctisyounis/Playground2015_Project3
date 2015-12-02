@@ -11,7 +11,7 @@ public class GameOverManager : MonoBehaviour
     
     public HungryScript m_CurrentHunger;
     public float m_restartDelay = 5f;
-
+    public HungryScript m_hungryScript;
     #endregion
 
 
@@ -20,15 +20,16 @@ public class GameOverManager : MonoBehaviour
     void Awake()
     {
         m_anim = GetComponent<Animator>();
+        m_hungryScript = GameObject.Find("Hugh_Jackman").GetComponent<HungryScript>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (HungryScript.m_CurrentHungry <= 0)
+        if (m_hungryScript.m_CurrentHungry <= 0)
         {
-            HungryScript.Death();
+            m_hungryScript.Death();
             m_restartTimer += Time.deltaTime;
 
             if (m_restartTimer >= m_restartDelay)
