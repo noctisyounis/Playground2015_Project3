@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject m_playButton;
     public GameObject m_playerShip;
     public GameObject m_enemySpawner;
+    public GameObject m_chemSpawner;
+    public GameObject m_foodSpawner;
     public GameObject m_gameOver;
     public GameObject m_scoreUIText;
     public GameObject m_timeCounter;
@@ -70,6 +72,12 @@ public class GameManager : MonoBehaviour
                 //Start enemy spawner
                 m_enemySpawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
 
+                //Start chem spawner
+                m_chemSpawner.GetComponent<ChemSpawner>().ScheduleChemSpawner();
+
+                //Start food spawner
+                m_foodSpawner.GetComponent<FoodSpawner>().ScheduleFoodSpawner();
+
                 //Start the time counter
                 m_timeCounter.GetComponent<TimeCounter>().StartTimeCounter();
 
@@ -82,6 +90,12 @@ public class GameManager : MonoBehaviour
 
                 //Stop Enemy spawner
                 m_enemySpawner.GetComponent<EnemySpawner>().UnscheduleEnemySpawner();
+
+                //Stop Chem spawner
+                m_chemSpawner.GetComponent<ChemSpawner>().UnscheduleChemSpawner();
+
+                //Stop Food spawner
+                m_foodSpawner.GetComponent<FoodSpawner>().UnscheduleFoodSpawner();
 
                 //Display GameOver
                 m_gameOver.SetActive(true);
@@ -96,8 +110,7 @@ public class GameManager : MonoBehaviour
                 //Display Xp Counter
                 m_experiencePanel.SetActive(true);
 
-                //Save Xp
-                m_savedExp.GetComponent<Save>().SaveXp();
+                m_savedExp.GetComponent<ExperienceScore>().UpdateExpTextUI();
                 
                 break;
 
@@ -138,22 +151,6 @@ public class GameManager : MonoBehaviour
     {
         //Quit the mini-game to go to MainScene
         Application.LoadLevel("MainScene");
-    }
-    #endregion
-
-    #region Utils && Debug
-    //Function to convert String to Int
-    public int ConvertStringToInt(string text)
-    {
-        //Convert Scrore to XP
-        int result;
-        bool isConvert = int.TryParse(text, out result);
-
-        if (isConvert)
-        {
-            return result;
-        }
-        return -1;
     }
     #endregion
 

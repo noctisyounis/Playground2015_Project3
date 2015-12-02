@@ -34,6 +34,9 @@ public class EnemyGun : MonoBehaviour
 
             //Set the bullet direction
             bullet.GetComponent<EnemyBullet>().SetDirection(direction);
+
+            //Play the bubble sounds effect
+            GetComponent<AudioSource>().Play();
         }
     }
     #endregion

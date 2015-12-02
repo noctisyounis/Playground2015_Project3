@@ -23,6 +23,9 @@ public class PlayerControl : MonoBehaviour
     public Text m_livesUIText;
 
     public float m_speed;
+
+    public float m_timeBetweenShoot = 0.2f;
+    float m_counter;
     #endregion
 
     #region Main Methods
@@ -44,21 +47,30 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_counter -= Time.deltaTime;
         //Fire bullet when the spacebar is pressed
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space"))
         {
-            //Play the laser sounds effect
-            GetComponent<AudioSource>().Play();
+            if(m_counter < 0)
+            {
+                m_counter = m_timeBetweenShoot;
+                //Play the bubble sounds effect
+                GetComponent<AudioSource>().Play();
 
-            //Instantiate the first bullet
-            GameObject Bullet01 = (GameObject)Instantiate(m_playerBullet);
+                //Instantiate the first bullet
+                GameObject Bullet01 = (GameObject)Instantiate(m_playerBullet);
 
-            Bullet01.transform.position = m_bulletPosition01.transform.position; //Set the first bullet to initiale position
+                //Set the first bullet to initiale position
+                Bullet01.transform.position = m_bulletPosition01.transform.position; 
 
-            //Instantiate the second bullet
-            GameObject Bullet02 = (GameObject)Instantiate(m_playerBullet);
-
-            Bullet02.transform.position = m_bulletPosition02.transform.position; //Set the second bullet to initiale position
+                //Play the shooting animation
+                GetComponent<Animator>().SetBool("isShooting", true);
+            }
+        }
+        else
+        {
+            //Stop the shooting animation
+            GetComponent<Animator>().SetBool("isShooting", false);
         }
 
         //These two lines get the input from keyboard with arrow or ZQSD
@@ -134,6 +146,8 @@ public class PlayerControl : MonoBehaviour
             {
                 //Change gamemanager state to gameover state
                 m_gameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.e_gameManagerState.GameOver);
+
+                GetComponent<Animator>().SetBool("isDead", true);
 
                 //Hide the player's ship 
                 gameObject.SetActive(false);
