@@ -20,37 +20,80 @@ public class InteractCreature : MonoBehaviour
     #endregion
 
     #region MainMethod
-
-  
-    void OnMouseOver()
+    void Start()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Cursor.SetCursor(m_cursorHand, m_hotSpot, m_cursorMode);
-            m_currentKarma += 20;
-            m_karmaSlide.value = m_currentKarma;
-            GetComponent<Animator>().SetBool("ifHug",true);    
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
-            GetComponent<Animator>().SetBool("ifHug", false);
-        }
+        OnMouseOver();
+    }
 
-        if (Input.GetMouseButtonDown(1))
+    IEnumerator maCoroutine()
+    {
+        while( true )
         {
-            Cursor.SetCursor(m_cursorGlove, m_hotSpot, m_cursorMode);
-            m_currentKarma -= 20;
-            m_karmaSlide.value = m_currentKarma;
-            GetComponent<Animator>().SetBool("ifBeat", true);
-        }
-        if (Input.GetMouseButtonUp(1))
-        {
-            Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
-            GetComponent<Animator>().SetBool("ifBeat", false);
+            if(Input.GetMouseButtonDown(0))
+            {
+                Cursor.SetCursor(m_cursorHand, m_hotSpot, m_cursorMode);
+                m_currentKarma += 1;
+                m_karmaSlide.value = m_currentKarma;
+                GetComponent<Animator>().SetBool("ifHug", true);
+                yield return new WaitForSeconds(3f);
+            }
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
+                GetComponent<Animator>().SetBool("ifHug", false);
+            }
 
+            if (Input.GetMouseButtonDown(1))
+            {
+                Cursor.SetCursor(m_cursorGlove, m_hotSpot, m_cursorMode);
+                m_currentKarma -= 2;
+                m_karmaSlide.value = m_currentKarma;
+                GetComponent<Animator>().SetBool("ifBeat", true);
+                yield return new WaitForSeconds(3f);
+            }
+           
+            if (Input.GetMouseButtonUp(1))
+            {
+                Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
+                GetComponent<Animator>().SetBool("ifBeat", false);
+            }
+            yield return new WaitForSeconds(0);
         }
     }
+    void OnMouseOver()
+    {
+       // StartCoroutine("maCoroutine");
+    }
+    //void OnMouseOver()
+    //{
+    //    if(Input.GetMouseButtonDown(0))
+    //    {
+    //        Cursor.SetCursor(m_cursorHand, m_hotSpot, m_cursorMode);
+    //        m_currentKarma += 20;
+    //        m_karmaSlide.value = m_currentKarma;
+    //        GetComponent<Animator>().SetBool("ifHug",true);    
+    //    }
+    //    if (Input.GetMouseButtonUp(0))
+    //    {
+    //        Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
+    //        GetComponent<Animator>().SetBool("ifHug", false);
+    //    }
+
+    //    if (Input.GetMouseButtonDown(1))
+    //    {
+    //        Cursor.SetCursor(m_cursorGlove, m_hotSpot, m_cursorMode);
+    //        m_currentKarma -= 20;
+    //        m_karmaSlide.value = m_currentKarma;
+    //        GetComponent<Animator>().SetBool("ifBeat", true);
+    //    }
+    //    if (Input.GetMouseButtonUp(1))
+    //    {
+    //        Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
+    //        GetComponent<Animator>().SetBool("ifBeat", false);
+
+    //    }
+    //}
 
 
     void OnMouseExit()
