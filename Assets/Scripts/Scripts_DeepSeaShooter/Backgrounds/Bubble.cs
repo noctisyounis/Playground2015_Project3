@@ -26,6 +26,11 @@ public class Bubble : MonoBehaviour
         //Substract the bubble half height to min y
         m_min.y = m_min.y - halfSize;
     }
+    // Use this for initialization
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()

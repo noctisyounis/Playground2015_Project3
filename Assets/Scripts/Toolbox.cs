@@ -42,21 +42,6 @@ public static class Toolbox
 
         return iValue;
     }
-
-    //Function to convert String to Int
-    public static int ConvertStringToInt(string text)
-    {
-        //Convert Scrore to XP
-        int result;
-        bool isConvert = int.TryParse(text, out result);
-
-        if (isConvert)
-        {
-            return result;
-        }
-        return -1;
-    }
-
     #endregion
 
     //Empty
