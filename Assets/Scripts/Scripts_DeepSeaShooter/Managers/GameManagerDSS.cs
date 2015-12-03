@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerDSS : MonoBehaviour
 {
     #region Public Variables || Properties
     //Reference to our gameobject
@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
     }
 
     //Function to set the game manager state
-    public void SetGameManagerState(e_gameManagerState State)
+    public void SetGameManagerState(e_gameManagerState state)
     {
-        GMState = State;
+        GMState = state;
         UpdateGameManagerState();
     }
 

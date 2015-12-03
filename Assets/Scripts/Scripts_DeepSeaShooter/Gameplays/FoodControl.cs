@@ -41,7 +41,9 @@ public class FoodControl : MonoBehaviour
         //Detect collision of the food with player
         if (col.tag == "PlayerMobTag")
         {
-            GetComponent<AudioSource>().Play();            
+            GetComponent<AudioSource>().Play(); //<---------BUG A CORRIGER-------->
+
+            //<-------------------Add the Chem to playerpref for mainScene----------------------->
 
             //Destroy food
             Destroy(gameObject);

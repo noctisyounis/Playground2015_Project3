@@ -10,6 +10,8 @@ public class Save : MonoBehaviour
 
         Debug.Log("xpINT = " + xpInt);
 
+        //<---------------------Add xp to playerpref for mainScene---------------------->
+
         if (PlayerPrefs.HasKey("SavedXp"))
         {
             int oldXp = PlayerPrefs.GetInt("SavedXp");

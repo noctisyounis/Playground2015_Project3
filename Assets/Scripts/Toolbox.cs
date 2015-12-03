@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public static class Toolbox
 {
@@ -43,20 +43,21 @@ public static class Toolbox
         return iValue;
     }
 
-    //Function to convert String to Int
-    public static int ConvertStringToInt(string text)
+    public static List<GameObject> getItemInLayer(int layer)
     {
-        //Convert Scrore to XP
-        int result;
-        bool isConvert = int.TryParse(text, out result);
+        GameObject[] objects = GameObject.FindObjectsOfType<GameObject>();
+        List<GameObject> items = new List<GameObject>();
 
-        if (isConvert)
+        for (int i = 0; i < objects.Length; ++i)
         {
-            return result;
+            if(objects[i].layer == layer)
+            {
+                items.Add(objects[i]);
+            }
         }
-        return -1;
-    }
 
+        return items;
+    }
     #endregion
 
     //Empty

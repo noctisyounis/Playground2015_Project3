@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SlotManager : MonoBehaviour
 {
 
     #region Public_Variable
 
+    public List<string> m_LaunchGame;
     public int m_colsCount = 0;
     public int m_rowCount = 0;
     public GameObject m_slotPrefab;
@@ -28,6 +30,9 @@ public class SlotManager : MonoBehaviour
             {
                 GameObject currentSlot = Instantiate(m_slotPrefab, new Vector3(m_slotPosition.x + i * m_slotOffset, m_slotPosition.y - j * m_slotOffset), Quaternion.identity) as GameObject;
                 currentSlot.transform.SetParent(transform, false);
+                SlotGame slot = currentSlot.GetComponent<SlotGame>();
+                Debug.Log(slot);
+                //slot.m_GameName = m_LaunchGame[i];
                 //currentSlot.transform.localScale = Vector3.one;
             }
         }

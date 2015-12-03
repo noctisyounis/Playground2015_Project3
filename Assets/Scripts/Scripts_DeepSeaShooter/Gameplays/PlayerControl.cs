@@ -13,7 +13,6 @@ public class PlayerControl : MonoBehaviour
     #region Public Variables || Properties
     //Reference to our GameManager
     public GameObject m_gameManager;
-
     public GameObject m_playerBullet;
     public GameObject m_bulletPosition01;
     public GameObject m_bulletPosition02;
@@ -21,9 +20,7 @@ public class PlayerControl : MonoBehaviour
 
     //Reference to the live ui text
     public Text m_livesUIText;
-
     public float m_speed;
-
     public float m_timeBetweenShoot = 0.2f;
     float m_counter;
     #endregion
@@ -40,7 +37,7 @@ public class PlayerControl : MonoBehaviour
         //Reset the player position to the center of the screen
         transform.position = new Vector2(-400, 0);
 
-        //Set this plyer game object to active
+        //Set this player game object to active
         gameObject.SetActive(true);
     }
 
@@ -145,7 +142,7 @@ public class PlayerControl : MonoBehaviour
             if (m_lives == 0)
             {
                 //Change gamemanager state to gameover state
-                m_gameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.e_gameManagerState.GameOver);
+                m_gameManager.GetComponent<GameManagerDSS>().SetGameManagerState(GameManagerDSS.e_gameManagerState.GameOver);
 
                 GetComponent<Animator>().SetBool("isDead", true);
 
