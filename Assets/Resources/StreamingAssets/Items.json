@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 0,
+    "Name": "Potion",
+    "Description": "Regenerate the life of creature",
+    "Intensity": 10,
+    "Type": 1,
+    "Element": 0,
+    "Rarity": 2,
+    "Stackable": true,
+    "Sprite": "Resources_Inventories/Items/potion-base"
+  },
+  {
+    "Id": 1,
+    "Name": "Meat",
+    "Description": "Regenerate the bar of hunger",
+    "Intensity": 10,
+    "Type": 2,
+    "Element": 0,
+    "Rarity": 1,
+    "Stackable": true,
+    "Sprite": "Resources_Inventories/Items/food-base"
+  },
+  {
+    "Id": 2,
+    "Name": "Potion of Evolve",
+    "Description": "This item is used for assign a evolution with the creature",
+    "Intensity": 10,
+    "Type": 3,
+    "Element": 0,
+    "Rarity": 3,
+    "Stackable": false,
+    "Sprite": "Resources_Inventories/Items/potion-evolve"
+  }
+]

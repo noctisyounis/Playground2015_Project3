@@ -57,7 +57,7 @@ public class Creature : MonoBehaviour
 
         set
         {
-            m_karma = Toolbox.Check(value, 0, (int)e_karmaState.MaxKarma);
+            m_karma = Toolbox.Check(value, 0, (int)e_karmaState.Max_Karma);
         }
     }
 
@@ -70,7 +70,7 @@ public class Creature : MonoBehaviour
 
         set
         {
-            m_hunger = Toolbox.Check(value, 0, (int)e_hungerState.MaxHunger);
+            m_hunger = Toolbox.Check(value, 0, (int)e_hungerState.Max_Hunger);
         }
     }
     public e_element[] m_typeCreature;
@@ -93,12 +93,12 @@ public class Creature : MonoBehaviour
         {
             case e_action.Eat:
                 //verify if the item is really food
-                if(item.m_typeItem == e_itemType.FOOD)
+                if(item.TypeItem== e_itemType.FOOD)
                 {
                     //if creature type is normal or food is normal, no problem
                     //idem if creature and food type are compatible
                     //if not, ...
-                    if(m_typeCreature[0] == e_element.Normal || item.m_elementType == e_element.Normal)
+                    if(m_typeCreature[0] == e_element.Normal || item.ElementTarget == e_element.Normal)
                     {
                         ChangeHunger(tmpValue);
                     }
@@ -108,7 +108,7 @@ public class Creature : MonoBehaviour
 
                         for(int i = 0; i < m_typeCreature.Length; ++i)
                         {
-                            if(m_typeCreature[i] == item.m_elementType)
+                            if(m_typeCreature[i] == item.ElementTarget)
                             {
                                 isGood = true;
                                 break;
@@ -128,7 +128,7 @@ public class Creature : MonoBehaviour
                 break;
 
             case e_action.DrinkPotion:
-                switch (item.m_typeItem)
+                switch (item.TypeItem)
                 {
                     case e_itemType.POTION:
                         ChangeHunger(tmpValue);
@@ -137,7 +137,7 @@ public class Creature : MonoBehaviour
                     case e_itemType.POTION_EVOLVE:
                         if (m_typeCreature[0] == e_element.Normal)
                         {
-                            m_typeCreature[0] = item.m_elementType;
+                            m_typeCreature[0] = item.ElementTarget;
                         }
                         else
                         {
@@ -147,7 +147,7 @@ public class Creature : MonoBehaviour
                                 tmpTypeCreature[i] = m_typeCreature[i];
                             }
 
-                            tmpTypeCreature[tmpTypeCreature.Length - 1] = item.m_elementType;          
+                            tmpTypeCreature[tmpTypeCreature.Length - 1] = item.ElementTarget;          
                         }
                         break;
 
@@ -192,14 +192,14 @@ public class Creature : MonoBehaviour
     {
         int tmpKarma = karma + Karma;
 
-        Karma = Toolbox.Check(tmpKarma, 0, (int)e_karmaState.MaxKarma);
+        Karma = Toolbox.Check(tmpKarma, 0, (int)e_karmaState.Max_Karma);
     }
 
     void ChangeHunger(int intensity)
     {
         int tmpHunger = intensity + Hunger;
 
-        Hunger = Toolbox.Check(tmpHunger, 0, (int)e_hungerState.MaxHunger);
+        Hunger = Toolbox.Check(tmpHunger, 0, (int)e_hungerState.Max_Hunger);
     }
 
     public Creature(string name)
