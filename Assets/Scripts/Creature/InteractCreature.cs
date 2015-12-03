@@ -32,7 +32,7 @@ public class InteractCreature : MonoBehaviour
             if(Input.GetMouseButtonDown(0))
             {
                 Cursor.SetCursor(m_cursorHand, m_hotSpot, m_cursorMode);
-                m_currentKarma += 1;
+                m_currentKarma += 10;
                 m_karmaSlide.value = m_currentKarma;
                 GetComponent<Animator>().SetBool("ifHug", true);
                 yield return new WaitForSeconds(3f);
@@ -47,7 +47,7 @@ public class InteractCreature : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 Cursor.SetCursor(m_cursorGlove, m_hotSpot, m_cursorMode);
-                m_currentKarma -= 2;
+                m_currentKarma -= 20;
                 m_karmaSlide.value = m_currentKarma;
                 GetComponent<Animator>().SetBool("ifBeat", true);
                 yield return new WaitForSeconds(3f);

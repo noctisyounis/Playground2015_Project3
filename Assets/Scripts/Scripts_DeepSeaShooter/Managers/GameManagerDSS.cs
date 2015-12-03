@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerDSS : MonoBehaviour
 {
     #region Public Variables || Properties
     //Reference to our gameobject

@@ -145,7 +145,7 @@ public class PlayerControl : MonoBehaviour
             if (m_lives == 0)
             {
                 //Change gamemanager state to gameover state
-                m_gameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.e_gameManagerState.GameOver);
+                m_gameManager.GetComponent<GameManagerDSS>().SetGameManagerState(GameManagerDSS.e_gameManagerState.GameOver);
 
                 GetComponent<Animator>().SetBool("isDead", true);
 
