@@ -2,23 +2,14 @@
 using System.Collections;
 
 public class HUDManager : MonoBehaviour
-{
+{ 
+    public Inventory m_inventoryFridge;
+    public InventoryLab m_inventoryLab;
 
-    public  SlotManager m_slotManager;
-    public  SlotManager m_slotGame;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
-        if (m_slotManager != null)
-        {
-            m_slotManager.CreateSlots();
-        }
-        if (m_slotManager != null)
-        {
-            m_slotGame.CreateSlots();
-        }
-
         
 	}
 	
