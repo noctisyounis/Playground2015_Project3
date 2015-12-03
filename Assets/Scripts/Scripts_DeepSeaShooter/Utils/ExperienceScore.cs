@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ExperienceScore : MonoBehaviour
 {
     #region Public Variables || Properties
+    public GameObject m_scoreUIText;
     public int m_xpDivisor;
     public int exp
     {
@@ -20,15 +21,6 @@ public class ExperienceScore : MonoBehaviour
     #endregion
 
     #region Main Methods
-    // Use this for initialization
-    void Start()
-    {
-
-        //m_scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
-
-        //UpdateExpTextUI();
-    }
-
     //Function to update exp text UI
     public void UpdateExpTextUI()
     {
@@ -38,17 +30,14 @@ public class ExperienceScore : MonoBehaviour
         //Compute Scoring to Experience
         int score = m_scoreUIText.GetComponent<GameScore>().score;
 
-        Debug.Log("beforescore = " + score);
-
         m_exp = score / m_xpDivisor;
 
         string expStr = string.Format("{0:0000000}", m_exp);
 
         m_expScoring.text = expStr;
-        Debug.Log("aftercompute score = " + expStr);
 
         //Save the current Xp
-        //GetComponent<Save>().SaveXp();
+        GetComponent<Save>().SaveXp();
     }
     #endregion
     void OnGUI()
@@ -58,7 +47,6 @@ public class ExperienceScore : MonoBehaviour
 
     #region Private && Protected Variables
     private Text m_expScoring;
-    public GameObject m_scoreUIText;
     private int m_exp;
     #endregion
 }

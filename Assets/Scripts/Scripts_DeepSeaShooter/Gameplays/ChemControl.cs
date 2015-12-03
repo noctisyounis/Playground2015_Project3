@@ -3,9 +3,6 @@ using System.Collections;
 
 public class ChemControl : MonoBehaviour
 {
-    #region Public Variables || Properties
-    #endregion
-
     #region Main Methods
     // Use this for initialization
     void Start()
@@ -40,7 +37,10 @@ public class ChemControl : MonoBehaviour
         //Detect collision of the Chem with Player
         if (col.tag == "PlayerMobTag")
         {
-            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play(); //<---------BUG A CORRIGER-------->
+
+            //<-------------------Add the Chem to playerpref for mainScene----------------------->
+
             //Destroy Chem
             Destroy(gameObject);
         }
