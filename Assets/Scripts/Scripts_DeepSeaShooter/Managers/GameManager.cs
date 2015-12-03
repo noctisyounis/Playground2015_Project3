@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
     }
 
     //Function to set the game manager state
-    public void SetGameManagerState(e_gameManagerState State)
+    public void SetGameManagerState(e_gameManagerState state)
     {
-        GMState = State;
+        GMState = state;
         UpdateGameManagerState();
     }
 
