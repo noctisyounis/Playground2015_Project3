@@ -67,8 +67,31 @@ public class Save : MonoBehaviour
             PlayerPrefs.SetInt("CERISE", player.m_numCerise);
         }
 
-        Debug.Log("playerPref" + PlayerPrefs.GetInt("SavedXp"));
+        Debug.Log("playerPref" + PlayerPrefs.GetInt("XP"));
     }
 
-
+    public void ResetPlayerPref()
+    {
+        if (PlayerPrefs.HasKey("XP"))
+        {
+            PlayerPrefs.SetInt("XP", 0);
+        }
+        if (PlayerPrefs.HasKey("BLUECHEMS"))
+        {
+            PlayerPrefs.SetInt("BLUECHEMS", 0);
+        }
+        if (PlayerPrefs.HasKey("PINKCHEMS"))
+        {
+            PlayerPrefs.SetInt("PINKCHEMS", 0);
+        }
+        if (PlayerPrefs.HasKey("ORANGECHEMS"))
+        {
+            PlayerPrefs.SetInt("ORANGECHEMS", 0);
+        }
+        if (PlayerPrefs.HasKey("CERISE"))
+        {
+            PlayerPrefs.SetInt("CERISE", 0);
+        }
+        Debug.Log("Est passer dans le Init");
+    }
 }

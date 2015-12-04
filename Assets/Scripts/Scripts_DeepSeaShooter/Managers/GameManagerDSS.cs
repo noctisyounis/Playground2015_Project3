@@ -6,7 +6,6 @@ public class GameManagerDSS : MonoBehaviour
 {
     #region Public Variables || Properties
     //Reference to our gameobject
-    public GameObject m_playButton;
     public GameObject m_playerShip;
     public GameObject m_enemySpawner;
     public GameObject m_chemSpawner;
@@ -14,7 +13,7 @@ public class GameManagerDSS : MonoBehaviour
     public GameObject m_gameOver;
     public GameObject m_scoreUIText;
     public GameObject m_timeCounter;
-    public GameObject m_titleGame;
+    public GameObject m_gameTitle;
     public GameObject m_experiencePanel;
     public GameObject m_savedExp;
 
@@ -35,7 +34,7 @@ public class GameManagerDSS : MonoBehaviour
     }
 
     //Function to update the gamemanager state
-    void UpdateGameManagerState()
+    private void UpdateGameManagerState()
     {
         switch (GMState)
         {
@@ -48,10 +47,7 @@ public class GameManagerDSS : MonoBehaviour
                 m_experiencePanel.SetActive(false);
 
                 //Display the game title
-                m_titleGame.SetActive(true);
-
-                //Set play button visible (active)
-                m_playButton.SetActive(true);
+                m_gameTitle.SetActive(true);
 
                 break;
 
@@ -59,12 +55,9 @@ public class GameManagerDSS : MonoBehaviour
 
                 //Reset the score
                 m_scoreUIText.GetComponent<GameScore>().score = 0;
-
-                //Hide the play button on game play state
-                m_playButton.SetActive(false);
-
+                
                 //Hide the game title
-                m_titleGame.SetActive(false);
+                m_gameTitle.SetActive(false);
 
                 //Set the player visible (active) and init player's lives
                 m_playerShip.GetComponent<PlayerControl>().Init();
