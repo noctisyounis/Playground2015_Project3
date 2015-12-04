@@ -10,15 +10,11 @@ public class Save : MonoBehaviour
     {
         int xpInt = GetComponent<ExperienceScore>().exp;
 
-        Debug.Log("xpINT = " + xpInt);
-
         //<---------------------Add xp to playerpref for mainScene---------------------->
 
         if (PlayerPrefs.HasKey("XP"))
         {
             int oldXp = PlayerPrefs.GetInt("XP");
-
-            Debug.Log("OldXp = " + oldXp);
 
             PlayerPrefs.SetInt("XP", xpInt + oldXp);
         }
@@ -66,8 +62,6 @@ public class Save : MonoBehaviour
         {
             PlayerPrefs.SetInt("CERISE", player.m_numCerise);
         }
-
-        Debug.Log("playerPref" + PlayerPrefs.GetInt("SavedXp"));
     }
 
 

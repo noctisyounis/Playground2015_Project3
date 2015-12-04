@@ -80,6 +80,7 @@ public class Level : MonoBehaviour
             int numbChem3 = PlayerPrefs.GetInt("ORANGECHEMS") + player.m_numbChem3;
 
             PlayerPrefs.SetInt("XP", xp);
+            Debug.Log("Xp set : " + PlayerPrefs.GetInt("XP"));
             PlayerPrefs.SetInt("CERISE", numbCerise);
             PlayerPrefs.SetInt("BLUECHEMS", numbChem1);
             PlayerPrefs.SetInt("PINKCHEMS", numbChem2);

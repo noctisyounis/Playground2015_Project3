@@ -38,7 +38,7 @@ public enum e_itemRarity
 
 public enum e_itemType
 {
-    NONE, POTION, FOOD, POTION_EVOLVE, POTION_POISON, BISCUIT
+    NONE, POTION, FOOD, POTION_EVOLVE, POTION_POISON, BISCUIT, CERISE, BLUE, PINK, ORANGE
 }
 
 public enum e_element

@@ -205,6 +205,18 @@ public class Item
                 textureRef = Resources.Load<Sprite>(m_dictionaryResources[(int)e_itemType.BISCUIT]);
                 break;
 
+            case e_itemType.CERISE:
+                textureRef = Resources.Load<Sprite>(m_dictionaryResources[(int)e_itemType.CERISE]);
+                break;
+
+            case e_itemType.BLUE:
+                textureRef = Resources.Load<Sprite>(m_dictionaryResources[(int)e_itemType.BLUE]);
+                break;
+
+            case e_itemType.ORANGE:
+                textureRef = Resources.Load<Sprite>(m_dictionaryResources[(int)e_itemType.ORANGE]);
+                break;
+
             default:
                 break;
         }
@@ -238,7 +250,11 @@ public class Item
         {2,  "Resources_Inventories/Items/food-base"},
         {3,  "Resources_Inventories/Items/potion-evolve"},
         {4,  "Resources_Inventories/Items/potion-poison"},
-        {5,  "Resources_Inventories/Items/biscuit-base"}
+        {5,  "Resources_Inventories/Items/biscuit-base"},
+        {6,  "Resources_Inventories/Items/cerise-base"},
+        {7,  "Resources_Inventories/Items/blue-base"},
+        {8,  "Resources_Inventories/Items/pink-base"},
+        {9,  "Resources_Inventories/Items/orange-base"}
     };
     #endregion
 }

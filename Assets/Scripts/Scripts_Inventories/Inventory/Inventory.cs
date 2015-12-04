@@ -32,10 +32,7 @@ public class Inventory : MonoBehaviour
 
         InitialiseInventary(m_slotAmount);
 
-        AddItem(0);
-        AddItem(1);
-        AddItem(1);
-        AddItem(2);
+        InitInventory();
     }
 
     void FixedUpdate()
@@ -44,6 +41,8 @@ public class Inventory : MonoBehaviour
         {
             m_showInventory = !m_showInventory;
         }
+
+        UpdateInventory();
     }
 
     void OnGUI()
@@ -55,6 +54,120 @@ public class Inventory : MonoBehaviour
         else if (m_showInventory == false)
         {
             m_inventoryPanel.SetActive(false);
+        }
+    }
+
+    public void UpdateInventory()
+    {
+        int cerise = 0;
+        int blue = 0;
+        int pink = 0;
+        int orange = 0;
+
+        if (PlayerPrefs.HasKey("CERISE"))
+        {
+            cerise = PlayerPrefs.GetInt("CERISE");
+            m_numbCerise += cerise;
+
+            PlayerPrefs.SetInt("TOTALCERISE", m_numbCerise);
+            PlayerPrefs.SetInt("CERISE", 0);
+        }
+
+        if (PlayerPrefs.HasKey("BLUECHEMS"))
+        {
+            blue = PlayerPrefs.GetInt("BLUECHEMS");
+            m_numbChemBlue += blue;
+            PlayerPrefs.SetInt("TOTALBLUE", m_numbChemBlue);
+            PlayerPrefs.SetInt("BLUECHEMS", 0);
+        }
+
+        if (PlayerPrefs.HasKey("PINKCHEMS"))
+        {
+            pink = PlayerPrefs.GetInt("PINKCHEMS");
+            m_numbChemPink += pink;
+
+            PlayerPrefs.SetInt("TOTALPINK", m_numbChemPink);
+            PlayerPrefs.SetInt("PINKCHEMS", 0);
+        }
+
+        if (PlayerPrefs.HasKey("ORANGECHEMS"))
+        {
+            orange = PlayerPrefs.GetInt("ORANGECHEMS");
+            m_numbChemOrange += orange;
+
+            PlayerPrefs.SetInt("TOTALORANGE", m_numbChemOrange);
+            PlayerPrefs.SetInt("ORANGECHEMS", 0);
+        }
+
+        for (int i = 0; i < cerise; ++i)
+        {
+            AddItem(3);
+        }
+
+        for (int i = 0; i < blue; ++i)
+        {
+            AddItem(4);
+        }
+
+        for (int i = 0; i < pink; ++i)
+        {
+            AddItem(5);
+        }
+
+        for (int i = 0; i < orange; ++i)
+        {
+            AddItem(6);
+        }
+    }
+
+    public void InitInventory()
+    {
+        if (PlayerPrefs.HasKey("TOTALCERISE"))
+        {
+            m_numbCerise = PlayerPrefs.GetInt("TOTALCERISE");
+
+            PlayerPrefs.SetInt("TOTALCERISE", m_numbCerise);
+        }
+
+        if (PlayerPrefs.HasKey("TOTALBLUE"))
+        {
+            m_numbChemBlue = PlayerPrefs.GetInt("TOTALBLUE");
+
+            PlayerPrefs.SetInt("TOTALBLUE", m_numbChemBlue);
+        }
+
+        if (PlayerPrefs.HasKey("TOTALPINK"))
+        {
+            m_numbChemPink = PlayerPrefs.GetInt("TOTALPINK");
+
+            PlayerPrefs.SetInt("TOTALPINK", m_numbChemPink);
+        }
+
+        if (PlayerPrefs.HasKey("TOTALORANGE"))
+        {
+            m_numbChemOrange = PlayerPrefs.GetInt("TOTALORANGE");
+
+            PlayerPrefs.SetInt("TOTALORANGE", m_numbChemOrange);
+        }
+
+        for (int i = 0; i < m_numbCerise; ++i)
+        {
+            AddItem(3);
+        }
+
+        for (int i = 0; i < m_numbChemBlue; ++i)
+        {
+            AddItem(4);
+        }
+
+        for (int i = 0; i < m_numbChemPink; ++i)
+        {
+            AddItem(5);
+        }
+
+        for (int i = 0; i < m_numbChemOrange; ++i)
+        {
+            AddItem(6);
         }
     }
 
@@ -81,6 +194,11 @@ public class Inventory : MonoBehaviour
                         data.transform.GetChild(0).GetComponent<Text>().text = "1";
                         data.m_amount = int.Parse(data.transform.GetChild(0).GetComponent<Text>().text);
                     }
+
+                    /*Increment the number of item on the slot*/
+                    // Check the value of item with the items what the winner has doned. 
+
+
 
                     data.m_amount++;
                     data.transform.GetChild(0).GetComponent<Text>().text = data.m_amount.ToString();
@@ -116,6 +234,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    bool CheckNumberItem(int number)
+    {
+        bool isChecked = false;
+
+        
+
+        return isChecked;
+    }
+
     /// <summary>
     /// Check if the item is in the list of item (m_items)
     /// </summary>
@@ -127,7 +254,6 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < m_items.Count; i++)
         {
-
             if (itemToSearched.Id == m_items[i].Id)
             {
                 isChecked = true;
@@ -161,6 +287,10 @@ public class Inventory : MonoBehaviour
     private GameObject m_slotPanel;
     private ItemManager m_itemManager;
     private bool m_showInventory;
+    private int m_numbCerise;
+    private int m_numbChemBlue;
+    private int m_numbChemPink;
+    private int m_numbChemOrange;
     #endregion
 
 }
