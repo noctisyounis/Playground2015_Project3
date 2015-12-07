@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: f53b4c1172d027342a86aaae4e9a3776
+timeCreated: 1449223200
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AnimeCrFlappyMaquette_0
+    21300002: AnimeCrFlappyMaquette_1
+    21300004: AnimeCrFlappyMaquette_2
+    21300006: AnimeCrFlappyMaquette_3
+    21300008: AnimeCrFlappyMaquette_4
+    21300010: AnimeCrFlappyMaquette_5
+    21300012: AnimeCrFlappyMaquette_6
+    21300014: AnimeCrFlappyMaquette_7
+    21300016: AnimeCrFlappyMaquette_8
+    21300018: AnimeCrFlappyMaquette_9
+    21300020: AnimeCrFlappyMaquette_10
+    21300022: AnimeCrFlappyMaquette_11
+    21300024: AnimeCrFlappyMaquette_12
+    21300026: AnimeCrFlappyMaquette_13
+    21300028: AnimeCrFlappyMaquette_14
+    21300030: AnimeCrFlappyMaquette_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AnimeCrFlappyMaquette_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 306
+        width: 81
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 315
+        width: 90
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 329
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_3
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 315
+        width: 90
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 212
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 212
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_6
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 223
+        width: 90
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_7
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 212
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 105
+        width: 88
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 112
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 126
+        width: 93
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 112
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 12
+        width: 82
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_13
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 17
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_14
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 31
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeCrFlappyMaquette_15
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 24
+        width: 61
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
