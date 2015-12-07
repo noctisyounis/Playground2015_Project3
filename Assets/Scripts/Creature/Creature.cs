@@ -6,6 +6,7 @@ public class Creature : MonoBehaviour
 {
     //kb To DO : change array to collection for creature type
     #region PublicVariable
+    public int m_xpMax;
 
     public string m_name;
 
@@ -22,19 +23,6 @@ public class Creature : MonoBehaviour
         }
     }
 
-    public int XpMax
-    {
-        get
-        {
-            return m_xpMax;
-        }
-
-        set
-        {
-            m_xpMax = Toolbox.CheckIfPositive(value, 100);
-        }
-    }
-
     public int Xp
     {
         get
@@ -44,7 +32,7 @@ public class Creature : MonoBehaviour
 
         set
         {
-            m_xp = Toolbox.Check(value, 0, m_xpMax);
+            m_xp = /*Toolbox.Check(value, 0, m_xpMax)*/ value;
         }
     }
 
@@ -153,8 +141,8 @@ public class Creature : MonoBehaviour
 
                     case e_itemType.POTION_POISON:
                         ChangeHunger(tmpValue);
-                        int xpToRemove = Toolbox.RoundValueToInt(XpMax * -0.2f);
-                        ChangeExperience(xpToRemove);
+                        int xpToRemove = Toolbox.RoundValueToInt(m_xpMax * -0.2f);
+                        m_xp -= xpToRemove;
                         break;
 
                     default:
@@ -175,10 +163,29 @@ public class Creature : MonoBehaviour
         }
     }
 
-    void ChangeExperience(int xp)
+    public float UpdateXP()
     {
-        int tmpXp = Xp + xp;
-        Xp = Toolbox.Check(tmpXp, 0, XpMax);
+        if (PlayerPrefs.HasKey("XPCREATURE"))
+        {
+            m_xp = PlayerPrefs.GetInt("XPCREATURE");
+        }
+
+        int xpGain = 0;
+
+        if (PlayerPrefs.HasKey("XP"))
+        {
+            xpGain = PlayerPrefs.GetInt("XP");
+
+            if(xpGain > 0)
+            {
+                PlayerPrefs.SetInt("XP", 0);
+            }
+        }
+
+        m_xp += xpGain;
+
+        PlayerPrefs.SetInt("XPCREATURE", m_xp);
+        return m_xp;
     }
 
     void AppliedDamage(int dmg)
@@ -219,7 +226,6 @@ public class Creature : MonoBehaviour
     int m_bonusKarma;
     const int LIFE_MAX = 100;
     int m_life;
-    int m_xpMax;
     int m_xp;
     int m_karma;
     int m_hunger;

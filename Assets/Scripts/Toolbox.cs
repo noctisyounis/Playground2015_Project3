@@ -19,6 +19,8 @@ public static class Toolbox
             value = minValue;
         }
 
+        Debug.Log("Value checked : " + value);
+
         return value;
     }
 
