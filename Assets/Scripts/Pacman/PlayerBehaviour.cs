@@ -29,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour {
         m_destination = transform.position;
         m_xpUI = GameObject.Find("XP").GetComponent<Text>();
         m_rgb2D = GetComponent<Rigidbody2D>();
+        color = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -85,6 +86,7 @@ public class PlayerBehaviour : MonoBehaviour {
         else
         {
             m_isInvincible = false;
+            color.color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -96,12 +98,12 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             if(m_isInvincible == false)
             {
-                Instantiate(Resources.Load("GetHit"));
+                Instantiate(Resources.Load(@"Pacman/GetHit"));
                 Destroy(gameObject);
             }
             else
             {
-                Instantiate(Resources.Load("EatEnnemy"));
+                Instantiate(Resources.Load(@"Pacman/EatEnnemy"));
                 EnemyBehaviour enemy = otherGO.GetComponent<EnemyBehaviour>();
                 otherGO.transform.position = enemy.m_startPosition;
                 enemy.m_isOut = false;
@@ -134,5 +136,6 @@ public class PlayerBehaviour : MonoBehaviour {
     Text m_xpUI;
     Animator animator;
     Rigidbody2D m_rgb2D;
+    SpriteRenderer color;
     #endregion
 }

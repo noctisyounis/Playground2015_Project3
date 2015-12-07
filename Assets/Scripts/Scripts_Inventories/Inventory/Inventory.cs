@@ -37,24 +37,7 @@ public class Inventory : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Inventory"))
-        {
-            m_showInventory = !m_showInventory;
-        }
-
         UpdateInventory();
-    }
-
-    void OnGUI()
-    {
-        if (m_showInventory)
-        {
-            m_inventoryPanel.SetActive(true);
-        }
-        else if (m_showInventory == false)
-        {
-            m_inventoryPanel.SetActive(false);
-        }
     }
 
     public void UpdateInventory()
