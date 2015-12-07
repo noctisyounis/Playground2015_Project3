@@ -8,6 +8,7 @@ public class Slot : MonoBehaviour, IDropHandler
 {
     public int m_id;
     public Inventory m_inventory;
+  
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -47,6 +48,18 @@ public class Slot : MonoBehaviour, IDropHandler
     // Use this for initialization
     void Start()
     {
-        m_inventory = GameObject.Find("InventoryFridge").GetComponent<Inventory>();
+        m_inventory = GameObject.Find(m_TypeInventory[0]).GetComponent<Inventory>();
     }
+
+    private enum TypeInv
+    {
+        Inventory,
+        InventoryLab
+    }
+
+    private Dictionary<int, string> m_TypeInventory = new Dictionary<int, string>()
+    {
+        {0, "InventoryFridge"},
+        {1, "InventoryLab"}
+    };
 }
