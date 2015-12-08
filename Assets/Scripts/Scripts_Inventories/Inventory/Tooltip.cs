@@ -12,7 +12,6 @@ public class Tooltip : MonoBehaviour
     {
         m_tooltip = GameObject.Find("Tooltip");
         m_tooltip.SetActive(false);
-    
     }
 
     void Update()
@@ -21,7 +20,6 @@ public class Tooltip : MonoBehaviour
         {
             m_tooltip.transform.position = Input.mousePosition;
         }
-      
     }
 
     private string SettingTooltip(Item item)

@@ -1,0 +1,529 @@
+fileFormatVersion: 2
+guid: 67e1c52fee9ef224abc0c37011353e1f
+timeCreated: 1449569798
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AnimeMaquette okok_0
+    21300002: AnimeMaquette okok_1
+    21300004: AnimeMaquette okok_2
+    21300006: AnimeMaquette okok_3
+    21300008: AnimeMaquette okok_4
+    21300010: AnimeMaquette okok_5
+    21300012: AnimeMaquette okok_6
+    21300014: AnimeMaquette okok_7
+    21300016: AnimeMaquette okok_8
+    21300018: AnimeMaquette okok_9
+    21300020: AnimeMaquette okok_10
+    21300022: AnimeMaquette okok_11
+    21300024: AnimeMaquette okok_12
+    21300026: AnimeMaquette okok_13
+    21300028: AnimeMaquette okok_14
+    21300030: AnimeMaquette okok_15
+    21300032: AnimeMaquette okok_16
+    21300034: AnimeMaquette okok_17
+    21300036: AnimeMaquette okok_18
+    21300038: AnimeMaquette okok_19
+    21300040: AnimeMaquette okok_20
+    21300042: AnimeMaquette okok_21
+    21300044: AnimeMaquette okok_22
+    21300046: AnimeMaquette okok_23
+    21300048: AnimeMaquette okok_24
+    21300050: AnimeMaquette okok_25
+    21300052: AnimeMaquette okok_26
+    21300054: AnimeMaquette okok_27
+    21300056: AnimeMaquette okok_28
+    21300058: AnimeMaquette okok_29
+    21300060: AnimeMaquette okok_30
+    21300062: AnimeMaquette okok_31
+    21300064: AnimeMaquette okok_32
+    21300066: AnimeMaquette okok_33
+    21300068: AnimeMaquette okok_34
+    21300070: AnimeMaquette okok_35
+    21300072: AnimeMaquette okok_36
+    21300074: AnimeMaquette okok_37
+    21300076: AnimeMaquette okok_38
+    21300078: AnimeMaquette okok_39
+    21300080: AnimeMaquette okok_40
+    21300082: AnimeMaquette okok_41
+    21300084: AnimeMaquette okok_42
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AnimeMaquette okok_0
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_1
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_2
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_3
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_4
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_5
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_6
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1000
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_7
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_8
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_9
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_10
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_11
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_12
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_13
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 800
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_15
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_16
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_17
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_18
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_19
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_20
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_21
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 600
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_22
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_23
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_24
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_25
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_26
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_27
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_28
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 400
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_29
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_30
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_31
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_32
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_33
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_34
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_35
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 200
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_36
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_37
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_38
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_39
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_40
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_41
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimeMaquette okok_42
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 0
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

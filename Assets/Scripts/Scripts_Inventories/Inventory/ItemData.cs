@@ -98,7 +98,7 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (Input.GetMouseButtonDown(1))
         {
-            //int clickCount = eventData.clickCount;
+            int clickCount = eventData.clickCount;
 
             GameObject Avatar = GameObject.FindGameObjectWithTag("Avatar");
             Creature creatureStats = Avatar.GetComponent<Creature>();
@@ -107,12 +107,13 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             ItemData dataCurrent = gameObject.GetComponent<ItemData>();
             Item itemCurrent = dataCurrent.m_item;
 
-            //Toolbox.Break("different size : " + different);
+            int different = (dataCurrent.m_slot - clickCount);
 
-            if (dataCurrent.m_slot > 0 && dataCurrent.m_slot > 0)
+            Toolbox.Break("different size : " + different);
+
+            if (dataCurrent.m_slot > 0 && different > 0)
             {
-                dataCurrent.m_slot--; 
-
+                dataCurrent.m_slot -= clickCount;
 
                 e_action actionToPlayed = DetectActionToDo(itemCurrent.TypeItem);
 
@@ -120,7 +121,7 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             }
             else
             {
-                //Toolbox.Break("Vous n'avez plus d'item");
+                Toolbox.Break("Vous n'avez plus d'item");
             }
  
         }

@@ -13,7 +13,6 @@ public class Inventory : MonoBehaviour
     public List<GameObject> m_slots;
     public GameObject m_inventorySlot;
     public GameObject m_inventoryItem;
-   // public GameObject m_laboPanel;
     #endregion
 
     #region MainMethods
