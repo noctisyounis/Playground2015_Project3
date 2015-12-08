@@ -6,13 +6,10 @@ public class myInteractCreature : MonoBehaviour
 {
     public int m_currentKarma;
     public Slider m_karmaSlide;
-    public GameObject m_hugh;
     public Texture2D m_cursorHand;
     public Texture2D m_cursorGlove;
     public CursorMode m_cursorMode = CursorMode.Auto;
     public Vector2 m_hotSpot = Vector2.zero;
-    public Animation m_happy;
-    public Animator m_happyAnimation;
     public float m_delayBetweenTwoBonus = 3f;
 
     IEnumerator Wait()
@@ -59,7 +56,7 @@ public class myInteractCreature : MonoBehaviour
         Cursor.SetCursor(m_cursorHand, m_hotSpot, m_cursorMode);
         m_currentKarma += 1;
         m_karmaSlide.value = m_currentKarma;
-        m_anim.SetBool("ifHug", true);
+        m_anim.SetFloat("Blend", 0.5f);
     }
 
     void Beat()
@@ -67,20 +64,18 @@ public class myInteractCreature : MonoBehaviour
         Cursor.SetCursor(m_cursorGlove, m_hotSpot, m_cursorMode);
         m_currentKarma -= 2;
         m_karmaSlide.value = m_currentKarma;
-        m_anim.SetBool("ifBeat", true);
+        m_anim.SetFloat("Blend", 0.666f);
     }
 
     void Release()
     {
         Cursor.SetCursor(null, m_hotSpot, m_cursorMode);
-        m_anim.SetBool("ifHug", false);
-        m_anim.SetBool("ifBeat", false);
+        m_anim.SetFloat("Blend", 0);
     }
 
     #region ProtectedAndPrivate
 
     bool m_canInteract = true;
     Animator m_anim;
-
     #endregion
 }

@@ -18,7 +18,6 @@ public class BirdMove : MonoBehaviour {
     public int m_numOrangeChem;
     public int m_numCerise;
 
-
     // Use this for initialization
     void Start ()
     {
