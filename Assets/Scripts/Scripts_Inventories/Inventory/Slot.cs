@@ -39,7 +39,7 @@ public class Slot : MonoBehaviour, IDropHandler
             }
             else
             {
-                Toolbox.Break("item is null !!!!");
+                //Toolbox.Break("item is null !!!!");
             }
 
         }

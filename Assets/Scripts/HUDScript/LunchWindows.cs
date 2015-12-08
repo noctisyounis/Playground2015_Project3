@@ -14,6 +14,13 @@ public class LunchWindows : MonoBehaviour {
 
     #region MainMethod
 
+    public void Start()
+    {
+        OpenInventory();
+        OpenMiniGameWindow();
+        OpenLabo();
+    }
+
     public void OpenMiniGameWindow()
     {
         if (m_isClose == true)
@@ -51,7 +58,38 @@ public class LunchWindows : MonoBehaviour {
 
     public void OpenLabo()
     {
-        m_labo.SetActive(true);
+
+        Debug.Log("Number of the childrens : " + transform.childCount);
+
+        /* foreach (Transform children in transform)
+         {
+             children.gameObject.SetActive(true);
+         }
+         */
+
+        m_labo.SetActiveRecursively(true);
+        if (m_isClose == true)
+        {
+            m_labo.SetActive(true);
+            m_isClose = false;
+        }
+        else
+        {
+            m_labo.SetActive(false);
+            m_isClose = true;
+        }
+    }
+
+    public void ActivateAllChildren( Transform elem )
+    {
+        if(elem.childCount > 0)
+        {
+            foreach ( Transform child in elem )
+            {
+                child.gameObject.SetActive(true);
+                ActivateAllChildren(child);
+            }
+        }
     }
 
     #endregion

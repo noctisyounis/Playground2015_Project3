@@ -2,26 +2,28 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Tooltip : MonoBehaviour
-{
+public class ToolTipLab : MonoBehaviour {
+
     private Item m_item;
     private string m_data;
-    private GameObject m_tooltip;
+    public GameObject m_toolTipLab;
+    
 
     void Start()
     {
-        m_tooltip = GameObject.Find("Tooltip");
-        m_tooltip.SetActive(false);
-    
+        
+        if (m_toolTipLab == null) Debug.Break();
+        m_toolTipLab.SetActive(false);
+
     }
 
     void Update()
     {
-        if (m_tooltip.activeSelf)
-        {
-            m_tooltip.transform.position = Input.mousePosition;
-        }
-      
+        //if (m_toolTipLab.activeSelf)
+        //{
+        //    m_toolTipLab.transform.position = Input.mousePosition;
+        //}
+
     }
 
     private string SettingTooltip(Item item)
@@ -68,12 +70,12 @@ public class Tooltip : MonoBehaviour
     {
         m_item = item;
         CreateTooltip();
-        m_tooltip.SetActive(true);
+        m_toolTipLab.SetActive(true);
     }
 
     public void Desactivate()
     {
-        m_tooltip.SetActive(false);
+        m_toolTipLab.SetActive(false);
     }
 
     public void CreateTooltip()
@@ -84,6 +86,6 @@ public class Tooltip : MonoBehaviour
 
         m_data = DataTmp;
 
-        m_tooltip.transform.GetChild(0).GetComponent<Text>().text = m_data;
+        m_toolTipLab.transform.GetChild(0).GetComponent<Text>().text = m_data;
     }
 }

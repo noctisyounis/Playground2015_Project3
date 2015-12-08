@@ -19,6 +19,11 @@ public class SlotManager : MonoBehaviour
 
     #region Main_Method
 
+    public void OnClick()
+    {
+        Debug.Log("OnClick !!");
+    }
+
     //Create all slots in the scene
     public void CreateSlots()
     {
@@ -92,7 +97,7 @@ public class SlotManager : MonoBehaviour
 
     #region PrivateAndProtected
 
-    
+   
 
     #endregion
 

@@ -34,7 +34,7 @@ public class GameOverManager : MonoBehaviour
 
             if (m_restartTimer >= m_restartDelay)
             {
-                Application.LoadLevel("title");
+                Application.LoadLevel("MainTitle");
             }
             
         }

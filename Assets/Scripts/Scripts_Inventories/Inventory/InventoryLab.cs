@@ -12,51 +12,132 @@ public class InventoryLab : MonoBehaviour {
     public List<GameObject> m_slots;
     public GameObject m_inventorySlot;
     public GameObject m_inventoryItem;
+    public GameObject m_inventoryPanel;
     #endregion
 
     #region MainMethods
 
     void Start()
     {
-        m_slotAmount = 18;
+        m_slotAmount = 17;
 
         m_itemManager = GetComponent<ItemManager>();
         m_items = new List<Item>();
         m_slots = new List<GameObject>();
 
-
-        m_inventoryPanel = GameObject.Find("InventoryLabPanel");
         m_inventoryPanel.SetActive(false);
-        m_slotPanel = m_inventoryPanel.transform.FindChild("BaseSlotPanel").gameObject;
+        m_slotPanel = m_inventoryPanel.transform.FindChild("BaseLabSlotPanel").gameObject;
 
-        InitialiseInventary(m_slotAmount);
+        InitialiseLaboratory(m_slotAmount);
 
-        AddItem(0);
-        AddItem(1);
-        AddItem(1);
-        AddItem(2);
+        InitLaboratory();
 
     }
 
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Labo"))
+        UpdateLaboratory();
+    }
+
+    public void UpdateLaboratory()
+    {
+        int blue = 0;
+        int pink = 0;
+        int orange = 0;
+
+        if (PlayerPrefs.HasKey("BLUECHEMS"))
         {
-            m_showInventory = !m_showInventory;
+            blue = PlayerPrefs.GetInt("BLUECHEMS");
+            m_numbChemBlue += blue;
+            PlayerPrefs.SetInt("TOTALBLUE", m_numbChemBlue);
+            PlayerPrefs.SetInt("BLUECHEMS", 0);
+        }
+
+        if (PlayerPrefs.HasKey("PINKCHEMS"))
+        {
+            pink = PlayerPrefs.GetInt("PINKCHEMS");
+            m_numbChemPink += pink;
+
+            PlayerPrefs.SetInt("TOTALPINK", m_numbChemPink);
+            PlayerPrefs.SetInt("PINKCHEMS", 0);
+        }
+
+        if (PlayerPrefs.HasKey("ORANGECHEMS"))
+        {
+            orange = PlayerPrefs.GetInt("ORANGECHEMS");
+            m_numbChemOrange += orange;
+
+            PlayerPrefs.SetInt("TOTALORANGE", m_numbChemOrange);
+            PlayerPrefs.SetInt("ORANGECHEMS", 0);
+        }
+
+        for (int i = 0; i < blue; ++i)
+        {
+            AddItem(4);
+        }
+
+        for (int i = 0; i < pink; ++i)
+        {
+            AddItem(5);
+        }
+
+        for (int i = 0; i < orange; ++i)
+        {
+            AddItem(6);
         }
     }
 
-    void OnGUI()
+    public void InitLaboratory()
     {
-        if (m_showInventory)
+
+        if (PlayerPrefs.HasKey("TOTALBLUE"))
         {
-            m_inventoryPanel.SetActive(true);
+            m_numbChemBlue = PlayerPrefs.GetInt("TOTALBLUE");
+
+            PlayerPrefs.SetInt("TOTALBLUE", m_numbChemBlue);
         }
-        else if (m_showInventory == false)
+
+        if (PlayerPrefs.HasKey("TOTALPINK"))
         {
-            m_inventoryPanel.SetActive(false);
+            m_numbChemPink = PlayerPrefs.GetInt("TOTALPINK");
+
+            PlayerPrefs.SetInt("TOTALPINK", m_numbChemPink);
+        }
+
+        if (PlayerPrefs.HasKey("TOTALORANGE"))
+        {
+            m_numbChemOrange = PlayerPrefs.GetInt("TOTALORANGE");
+
+            PlayerPrefs.SetInt("TOTALORANGE", m_numbChemOrange);
+        }
+
+        for (int i = 0; i < m_numbChemBlue; ++i)
+        {
+            AddItem(4);
+        }
+
+        for (int i = 0; i < m_numbChemPink; ++i)
+        {
+            AddItem(5);
+        }
+
+        for (int i = 0; i < m_numbChemOrange; ++i)
+        {
+            AddItem(6);
         }
     }
+
+    //void OnGUI()
+    //{
+    //    if (m_showInventory)
+    //    {
+    //        m_inventoryPanel.SetActive(true);
+    //    }
+    //    else if (m_showInventory == false)
+    //    {
+    //        m_inventoryPanel.SetActive(false);
+    //    }
+    //}
 
     public void AddItem(int id)
     {
@@ -140,7 +221,7 @@ public class InventoryLab : MonoBehaviour {
     #endregion
 
     #region Utils
-    private void InitialiseInventary(int nbSlotToInventory)
+    private void InitialiseLaboratory(int nbSlotToInventory)
     {
         for (int i = 0; i < nbSlotToInventory; i++)
         {
@@ -157,9 +238,11 @@ public class InventoryLab : MonoBehaviour {
     #endregion
 
     #region PrivateProtectedVariable
-    private GameObject m_inventoryPanel;
     private GameObject m_slotPanel;
     private ItemManager m_itemManager;
     private bool m_showInventory;
+    private int m_numbChemBlue;
+    private int m_numbChemPink;
+    private int m_numbChemOrange;
     #endregion
 }
