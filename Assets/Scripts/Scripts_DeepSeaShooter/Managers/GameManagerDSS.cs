@@ -16,6 +16,7 @@ public class GameManagerDSS : MonoBehaviour
     public GameObject m_gameTitle;
     public GameObject m_experiencePanel;
     public GameObject m_savedExp;
+    public GameObject m_controlPanel;
 
     public enum e_gameManagerState
     {
@@ -30,13 +31,13 @@ public class GameManagerDSS : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GMState = e_gameManagerState.Opening;
+        m_gMState = e_gameManagerState.Opening;
     }
 
     //Function to update the gamemanager state
     private void UpdateGameManagerState()
     {
-        switch (GMState)
+        switch (m_gMState)
         {
             case e_gameManagerState.Opening:
 
@@ -55,7 +56,7 @@ public class GameManagerDSS : MonoBehaviour
 
                 //Reset the score
                 m_scoreUIText.GetComponent<GameScore>().score = 0;
-                
+
                 //Hide the game title
                 m_gameTitle.SetActive(false);
 
@@ -104,7 +105,7 @@ public class GameManagerDSS : MonoBehaviour
                 m_experiencePanel.SetActive(true);
 
                 m_savedExp.GetComponent<ExperienceScore>().UpdateExpTextUI();
-                
+
                 break;
 
             default:
@@ -115,7 +116,7 @@ public class GameManagerDSS : MonoBehaviour
     //Function to set the game manager state
     public void SetGameManagerState(e_gameManagerState state)
     {
-        GMState = state;
+        m_gMState = state;
         UpdateGameManagerState();
     }
 
@@ -123,7 +124,7 @@ public class GameManagerDSS : MonoBehaviour
     //when the user clicks on the button
     public void StartGamePlay()
     {
-        GMState = e_gameManagerState.GamePlay;
+        m_gMState = e_gameManagerState.GamePlay;
         UpdateGameManagerState();
     }
 
@@ -145,9 +146,30 @@ public class GameManagerDSS : MonoBehaviour
         //Quit the mini-game to go to MainScene
         Application.LoadLevel("MainScene");
     }
+
+    //Function to open control panel
+    public void OpenCloseControlPanel()
+    {
+        m_isShowWindow = !m_isShowWindow;
+    }
+
+    //function to close control panel
+    public void FixedUpdate()
+    {
+        if (m_isShowWindow)
+        {
+            m_controlPanel.SetActive(m_isShowWindow);
+        }
+        else
+        {
+            m_controlPanel.SetActive(m_isShowWindow);
+        }
+    }
+
     #endregion
 
     #region Private && Protected Variables
-    private e_gameManagerState GMState; 
+    private e_gameManagerState m_gMState;
+    private bool m_isShowWindow;
     #endregion
 }

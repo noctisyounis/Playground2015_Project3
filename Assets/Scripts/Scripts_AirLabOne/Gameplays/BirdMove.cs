@@ -13,9 +13,14 @@ public class BirdMove : MonoBehaviour {
     public Text m_scoreText;
     public AudioClip m_wingSound;
 
+    public int m_numBlueChem;
+    public int m_numPinkChem;
+    public int m_numOrangeChem;
+    public int m_numCerise;
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start ()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.right * m_speed;
         m_score = m_playerScore;
