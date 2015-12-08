@@ -47,10 +47,10 @@ public class GameManagerALO : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        GUILayout.Button("exist" + PlayerPrefs.HasKey("life") + "\n value" + PlayerPrefs.GetInt("life"));
-    }
+    //void OnGUI()
+    //{
+    //    GUILayout.Button("exist" + PlayerPrefs.HasKey("life") + "\n value" + PlayerPrefs.GetInt("life"));
+    //}
 
     void UpdateGameManagerState()
     {
