@@ -19,10 +19,12 @@ public class LunchWindows : MonoBehaviour {
         if (m_isClose == true)
         {
             m_miniGame.SetActive(true);
+            m_isClose = false;
         }
         else
         {
             m_miniGame.SetActive(false);
+            m_isClose = true;
         }
         
     }
@@ -35,7 +37,16 @@ public class LunchWindows : MonoBehaviour {
 
     public void OpenInventory()
     {
-        m_inventory.SetActive(true);
+        if (m_isClose == true)
+        {
+            m_inventory.SetActive(true);
+            m_isClose = false;
+        }
+        else
+        {
+            m_inventory.SetActive(false);
+            m_isClose = true;
+        }
     }
 
     public void OpenLabo()

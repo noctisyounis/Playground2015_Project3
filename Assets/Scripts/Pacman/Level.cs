@@ -118,47 +118,47 @@ public class Level : MonoBehaviour
             switch (m_map[i])
             {
                 case 1:
-                    tmp = (GameObject) Instantiate(Resources.Load("CornerTopLeft"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/CornerTopLeft"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 2:
-                    tmp = (GameObject) Instantiate(Resources.Load("CornerTopRight"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/CornerTopRight"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 3:
-                    tmp = (GameObject) Instantiate(Resources.Load("CornerDownLeft"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/CornerDownLeft"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 4:
-                    tmp = (GameObject) Instantiate(Resources.Load("CornerDownRight"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/CornerDownRight"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 5:
-                    tmp = (GameObject) Instantiate(Resources.Load("HorizontalWall"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/HorizontalWall"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 6:
-                    tmp = (GameObject) Instantiate(Resources.Load("VerticalWall"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/VerticalWall"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 7:
-                    tmp = (GameObject) Instantiate(Resources.Load("ClosedDoorHorizontal"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/ClosedDoorHorizontal"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 8:
-                    tmp = (GameObject) Instantiate(Resources.Load("ClosedDoorVertical"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/ClosedDoorVertical"));
                     tmp.transform.position = new Vector2(fX, fY);
                     break;
 
                 case 9:
-                    tmp = (GameObject) Instantiate(Resources.Load("Pacdot"));
+                    tmp = (GameObject) Instantiate(Resources.Load(@"Pacman/Pacdot"));
                     Vector2 position = new Vector2(fX, fY);
                     tmp.transform.position = position;
                     m_positionBonus.Add(position);
@@ -207,7 +207,7 @@ public class Level : MonoBehaviour
             case 3:
             case 4:
             case 5:
-                tmp = (GameObject)Instantiate(Resources.Load("Cerise"));
+                tmp = (GameObject)Instantiate(Resources.Load(@"Pacman/Cerise"));
                 break;
 
             case 2:
@@ -217,15 +217,15 @@ public class Level : MonoBehaviour
                 switch (RandChem)
                 {
                     case 1:
-                        tmp = (GameObject)Instantiate(Resources.Load("Chem1"));
+                        tmp = (GameObject)Instantiate(Resources.Load(@"Pacman/Chem1"));
                         break;
 
                     case 2:
-                        tmp = (GameObject)Instantiate(Resources.Load("Chem2"));
+                        tmp = (GameObject)Instantiate(Resources.Load(@"Pacman/Chem2"));
                         break;
 
                     case 3:
-                        tmp = (GameObject)Instantiate(Resources.Load("Chem3"));
+                        tmp = (GameObject)Instantiate(Resources.Load(@"Pacman/Chem3"));
                         break;
                 }
                 break;
