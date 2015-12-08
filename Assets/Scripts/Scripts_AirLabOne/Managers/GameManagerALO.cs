@@ -14,10 +14,10 @@ public class GameManagerALO : MonoBehaviour
     public GameObject m_gameOver;
     public GameObject m_opening;
     public Text m_scoreUIText;
-    //public GameObject m_timeCounter;
     public GameObject m_titleGame;
+    public GameObject m_controlPanel;
     public GameObject m_experiencePanel;
-    //public GameObject m_savedExp;
+    public GameObject m_savedExp;
 
     public enum e_gameManagerState
     {
@@ -37,7 +37,6 @@ public class GameManagerALO : MonoBehaviour
             if (PlayerPrefs.GetInt("life") <= 0)
             {
                 Debug.Log("startbreak");
-                //Debug.Break();
                 GMState = e_gameManagerState.Opening;
             }
             else
@@ -94,8 +93,6 @@ public class GameManagerALO : MonoBehaviour
 
                 //Set the player visible (active) and init player's lives
                 m_hero.SetActive(true);
-                
-                //Start the time counter
 
                 break;
 
@@ -108,9 +105,7 @@ public class GameManagerALO : MonoBehaviour
 
                 //Display GameOver
                 m_gameOver.SetActive(true);
-                //Debug.Log("gameoverstate");
-                //Debug.Break();
-                //Change game manager state to scoring state after 5 secondes
+                //Change game manager state to scoring state after 3 secondes
                 Invoke("ChangeToScoringState", 3f);
 
                 break;
@@ -119,9 +114,10 @@ public class GameManagerALO : MonoBehaviour
 
                 //Display Xp Counter
                 m_experiencePanel.SetActive(true);
-                Debug.Break();
+                //Debug.Break();
                 Debug.Log("scoringstate");
                 //Compute xP
+                m_savedExp.GetComponent<ExperienceScore>().UpdateExpTextUI();
 
                 break;
 
@@ -158,16 +154,37 @@ public class GameManagerALO : MonoBehaviour
         SetGameManagerState(e_gameManagerState.Scoring);
     }
 
+    //Function to open control panel
+    public void OpenCloseControlPanel()
+    {
+        m_isShowWindow = !m_isShowWindow;
+    }
+
+    //function to close control panel
+    public void FixedUpdate()
+    {
+        if (m_isShowWindow)
+        {
+            m_controlPanel.SetActive(m_isShowWindow);
+        }
+        else
+        {
+            m_controlPanel.SetActive(m_isShowWindow);
+        }
+    }
+
     //Function to quit the minigame
     public void QuitMiniGame()
     {
         //Quit the mini game to go to main scene
+        SoundManager.instance.m_musicSource.Stop();
         Application.LoadLevel("MainScene");
     }
     #endregion
 
     #region ProtectedAndPrivate
     public e_gameManagerState GMState;
+    private bool m_isShowWindow;
     #endregion
 
 
