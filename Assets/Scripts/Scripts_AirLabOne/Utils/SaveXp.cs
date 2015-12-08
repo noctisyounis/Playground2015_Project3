@@ -7,7 +7,7 @@ public class SaveXp : MonoBehaviour
 
     public void Save()
     {
-        int xpInt = GetComponent<ExperienceScore>().exp;
+        int xpInt = GetComponent<Experience>().exp;
 
         //<---------------------Add xp to playerpref for mainScene---------------------->
 

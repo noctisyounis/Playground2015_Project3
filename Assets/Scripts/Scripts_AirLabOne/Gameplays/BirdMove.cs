@@ -40,8 +40,30 @@ public class BirdMove : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Chems")
+        if (col.tag == "BlueChem")
         {
+            m_numBlueChem += 1;
+            m_score += m_pointPerChem;
+            m_scoreText.text = "+" + m_pointPerChem + " " + "Score : " + m_score;
+            col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x + m_offSet, col.gameObject.transform.position.y);
+        }
+        else if (col.tag == "PinkChem")
+        {
+            m_numPinkChem += 1;
+            m_score += m_pointPerChem;
+            m_scoreText.text = "+" + m_pointPerChem + " " + "Score : " + m_score;
+            col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x + m_offSet, col.gameObject.transform.position.y);
+        }
+        else if (col.tag == "OrangeChem")
+        {
+            m_numOrangeChem += 1;
+            m_score += m_pointPerChem;
+            m_scoreText.text = "+" + m_pointPerChem + " " + "Score : " + m_score;
+            col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x + m_offSet, col.gameObject.transform.position.y);
+        }
+        else if (col.tag == "Cherry")
+        {
+            m_numCerise += 1;
             m_score += m_pointPerChem;
             m_scoreText.text = "+" + m_pointPerChem + " " + "Score : " + m_score;
             col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x + m_offSet, col.gameObject.transform.position.y);

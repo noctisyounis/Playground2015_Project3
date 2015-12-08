@@ -36,7 +36,6 @@ public class GameManagerALO : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("life") <= 0)
             {
-                Debug.Log("startbreak");
                 GMState = e_gameManagerState.Opening;
             }
             else
@@ -71,8 +70,10 @@ public class GameManagerALO : MonoBehaviour
                 //Display GameTitle
                 m_titleGame.SetActive(true);
 
-                //Set PlayButton to true
+                //Set Button to true
                 m_playButton.SetActive(true);
+                m_controlButton.SetActive(true);
+                m_backButton.SetActive(true);
 
                 break;
 
@@ -105,6 +106,7 @@ public class GameManagerALO : MonoBehaviour
 
                 //Display GameOver
                 m_gameOver.SetActive(true);
+
                 //Change game manager state to scoring state after 3 secondes
                 Invoke("ChangeToScoringState", 3f);
 
@@ -114,10 +116,9 @@ public class GameManagerALO : MonoBehaviour
 
                 //Display Xp Counter
                 m_experiencePanel.SetActive(true);
-                //Debug.Break();
-                Debug.Log("scoringstate");
+
                 //Compute xP
-                m_savedExp.GetComponent<ExperienceScore>().UpdateExpTextUI();
+                m_savedExp.GetComponent<Experience>().UpdateExpTextUI();
 
                 break;
 
@@ -177,7 +178,6 @@ public class GameManagerALO : MonoBehaviour
     public void QuitMiniGame()
     {
         //Quit the mini game to go to main scene
-        SoundManager.instance.m_musicSource.Stop();
         Application.LoadLevel("MainScene");
     }
     #endregion

@@ -63,21 +63,38 @@ public class Life : MonoBehaviour
         m_currentLife -= m_damageOnCol;
         PlayerPrefs.SetInt("life", m_currentLife);
 
+        int xpInt = GetComponent<BirdMove>().m_score;
 
         m_lifeSlider.value = m_currentLife;
 
         if (m_damaged  && m_currentLife > 0)
         {
-            PlayerPrefs.SetInt("life", m_currentLife);
-            Application.LoadLevel("AirLabOne");
-            
-            //m_gameManager.GetComponent<GameManager>().SetGameManagerState(GameManager.e_gameManagerState.Gameplay);
-        }
+            if (PlayerPrefs.HasKey("SCORE"))
+            {
+                int oldXp = PlayerPrefs.GetInt("SCORE");
 
-        //Debug.Log("life " + m_currentLife);
-        //Debug.Break();
+                PlayerPrefs.SetInt("SCORE", xpInt + oldXp);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("SCORE", xpInt);
+            }
+
+            PlayerPrefs.SetInt("life", m_currentLife);
+            Application.LoadLevel("AirLabOne");            
+        }        
         else if (m_currentLife <= 0 && !m_isDead)
         {
+            if (PlayerPrefs.HasKey("SCORE"))
+            {
+                int oldXp = PlayerPrefs.GetInt("SCORE");
+
+                PlayerPrefs.SetInt("SCORE", xpInt + oldXp);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("SCORE", xpInt);
+            }
             Death();
         }      
     }
@@ -89,13 +106,11 @@ public class Life : MonoBehaviour
 
     void Death()
     {
-        Debug.Log("ok");
         m_isDead = false;
         //Hide the player's bird
         gameObject.SetActive(false);
         //Change the GameManager state to GameOver
         m_gameManager.GetComponent<GameManagerALO>().SetGameManagerState(GameManagerALO.e_gameManagerState.GameOver);
-        SoundManager.instance.m_musicSource.Stop();
     }
 
     #endregion
@@ -104,7 +119,6 @@ public class Life : MonoBehaviour
 
     bool m_damaged;
     static bool m_isDead;
-
     #endregion
 
 

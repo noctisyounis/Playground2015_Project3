@@ -17,6 +17,7 @@ public class GameManagerDSS : MonoBehaviour
     public GameObject m_experiencePanel;
     public GameObject m_savedExp;
     public GameObject m_controlPanel;
+    public GameObject m_parallax;
 
     public enum e_gameManagerState
     {
@@ -47,6 +48,9 @@ public class GameManagerDSS : MonoBehaviour
                 //Hide ExpPanel
                 m_experiencePanel.SetActive(false);
 
+                //Stop parallax
+                m_parallax.GetComponent<ParallaxManagerDSS>().m_enabled = false;
+
                 //Display the game title
                 m_gameTitle.SetActive(true);
 
@@ -57,8 +61,14 @@ public class GameManagerDSS : MonoBehaviour
                 //Reset the score
                 m_scoreUIText.GetComponent<GameScore>().score = 0;
 
+                //Stop parallax
+                m_parallax.GetComponent<ParallaxManagerDSS>().m_enabled = true;
+
                 //Hide the game title
                 m_gameTitle.SetActive(false);
+
+                //Show and start parallax
+                m_parallax.SetActive(true);
 
                 //Set the player visible (active) and init player's lives
                 m_playerShip.GetComponent<PlayerControl>().Init();
@@ -90,6 +100,9 @@ public class GameManagerDSS : MonoBehaviour
 
                 //Stop Food spawner
                 m_foodSpawner.GetComponent<FoodSpawner>().UnscheduleFoodSpawner();
+
+                //Stop parallax
+                m_parallax.GetComponent<ParallaxManagerDSS>().m_enabled = false;
 
                 //Display GameOver
                 m_gameOver.SetActive(true);
